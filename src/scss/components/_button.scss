@@ -1,0 +1,273 @@
+.btn {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 13px;
+  -webkit-appearance: none;
+  padding: 0.875rem;
+
+  &:active,
+  &:focus {
+    text-decoration: none !important;
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  .spinner-border {
+    border-right-color: currentColor !important;
+  }
+}
+
+.btn-primary {
+  border-color: $primary;
+  background-color: $primary;
+  color: $white !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: $deep-primary !important;
+    background-color: $deep-primary !important;
+    text-decoration: none !important;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-danger {
+  border-color: $danger;
+  background-color: $danger;
+  color: $white !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    border-color: #ff0000 !important;
+    background-color: #ff0000 !important;
+    text-decoration: none !important;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-secondary {
+  border-color: #ced4da;
+  background-color: $secondary;
+  color: $slate-gray !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none !important;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-outline-primary {
+  background-color: transparent !important;
+  border-color: $primary !important;
+  color: $primary !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $primary !important;
+    color: $white !important;
+    border-color: $primary !important;
+    text-decoration: none !important;
+    box-shadow: none;
+    outline: none;
+
+    svg,
+    svg .a {
+      fill: $white;
+    }
+
+    svg path {
+      stroke: $white;
+      fill: $white;
+    }
+
+    svg circle {
+      stroke: $white;
+    }
+
+    svg line {
+      stroke: $white;
+    }
+
+    svg polyline {
+      stroke: $white;
+    }
+
+    svg rect {
+      stroke: $white;
+    }
+
+    svg polygon {
+      stroke: $white;
+    }
+  }
+}
+
+.btn-outline-secondary {
+  background-color: transparent !important;
+  border-color: #ced4da !important;
+  color: $slate-gray !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $secondary !important;
+    color: $slate-gray !important;
+    border-color: #ced4da !important;
+    text-decoration: none !important;
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-outline-danger-bg {
+  background-color: #fef1f2 !important;
+  border-color: $danger !important;
+  color: $danger !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $danger !important;
+    color: $white !important;
+    border-color: $danger !important;
+    text-decoration: none !important;
+    box-shadow: none;
+    outline: none;
+
+    svg,
+    svg .a {
+      fill: $white;
+    }
+
+    svg path {
+      stroke: $white;
+      fill: $white;
+    }
+
+    svg circle {
+      stroke: $white;
+    }
+
+    svg line {
+      stroke: $white;
+    }
+
+    svg polyline {
+      stroke: $white;
+    }
+
+    svg rect {
+      stroke: $white;
+    }
+
+    svg polygon {
+      stroke: $white;
+    }
+  }
+}
+
+.btn-outline-danger {
+  background-color: transparent !important;
+  border-color: $danger !important;
+  color: $danger !important;
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: $danger !important;
+    color: $white !important;
+    border-color: $danger !important;
+    text-decoration: none !important;
+    box-shadow: none;
+    outline: none;
+
+    svg,
+    svg .a {
+      fill: $white;
+    }
+
+    svg path {
+      stroke: $white;
+      fill: $white;
+    }
+
+    svg circle {
+      stroke: $white;
+    }
+
+    svg line {
+      stroke: $white;
+    }
+
+    svg polyline {
+      stroke: $white;
+    }
+
+    svg rect {
+      stroke: $white;
+    }
+
+    svg polygon {
+      stroke: $white;
+    }
+  }
+}
+
+.btn-link {
+  text-decoration: none;
+  color: $primary;
+  border: none;
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $deep-primary;
+  }
+}
+
+.btn.disabled,
+.btn:disabled {
+  opacity: 0.35;
+  cursor: no-drop;
+}
+
+.btn-primary.disabled,
+.btn-primary:disabled {
+  cursor: not-allowed;
+}
+
+.btn-check:checked + .btn-outline-primary:focus,
+.btn-check:active + .btn-outline-primary:focus,
+.btn-outline-primary:active:focus,
+.btn-outline-primary.active:focus,
+.btn-outline-primary.dropdown-toggle.show:focus {
+  box-shadow: none;
+}
+
+.page-link:focus {
+  box-shadow: none;
+}
+
+.btn-social {
+  border-radius: 4px;
+  text-decoration: none;
+  padding: 1.025rem 1rem;
+
+  &.microsoft {
+    background-color: #00aeef;
+    color: white;
+  }
+
+  &.google {
+    background-color: #e74133;
+    color: white;
+  }
+}

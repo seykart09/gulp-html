@@ -1,0 +1,36 @@
+//  ----------------------------------------------------------------------------------------------
+//  File Name: app.scss
+//  Description: Include bootstrap core from node_modules & other scss
+//  ----------------------------------------------------------------------------------------------
+
+// BS functions
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
+
+@import "common/variables"; // Global Variables / Custom
+// variables - to set pages as per our color & variables
+
+// BS scss
+@import "bootstrap/scss/bootstrap"; // Bootstrap core
+
+// Custom Layouts
+@import "layouts/sidebar"; // Sidebar CSS
+@import "layouts/layouts"; // Layouts CSS
+
+@import "components/navbar"; // Navbar CSS
+@import "components/tables"; // Navbar CSS
+@import "components/pagination"; // Navbar CSS
+@import "components/button"; // Navbar CSS
+@import "components/dropdown"; // Navbar CSS
+@import "components/cards"; // Navbar CSS
+@import "components/modal"; // Navbar CSS
+@import "components/forms"; // Navbar CSS
+@import "components/filters"; // Navbar CSS
+
+@import "common/global"; // Global CSS
+@import "common/slick"; // Slick CSS
+@import "common/slicktheme"; // Slick Theme CSS
+
+@import "application/dashboard"; // Dashboard specific
+
+@import "common/utilities"; // utilities CSS

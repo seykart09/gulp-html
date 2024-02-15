@@ -1,0 +1,31 @@
+.modal {
+  .close {
+    padding: 0.625rem 1rem 0.625rem 0.625rem;
+    margin: 18px 14px -1rem auto;
+    background: none;
+    border: none;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+
+    &button:focus {
+      outline: 0;
+      box-shadow: none;
+    }
+  }
+
+  .modal-header {
+    align-items: start;
+  }
+
+  .modal-content {
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  .modal-bar{
+      border: 3px solid $primary;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+  }
+}

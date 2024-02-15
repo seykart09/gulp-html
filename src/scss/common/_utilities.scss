@@ -1,0 +1,584 @@
+$objectConfig: 0, contain, cover, fill, scale-down;
+
+@each $tuple in $objectConfig {
+  .object-fit-#{($tuple)} {
+    object-fit: $tuple;
+  }
+}
+
+@for $i from 1 through 5000 {
+  .vh-height-#{$i} {
+    height: calc(100vh - #{$i}px);
+  }
+}
+
+.trend {
+  margin-left: 10px;
+  font-size: 1em;
+  margin-top: 5px;
+
+  $images: (
+    "upwards": (
+      "color": rgba(1, 199, 177, 1),
+      "img": url(../images/svg/upward-trend.svg),
+      "label": "Upwards",
+      "name": "upwards",
+    ),
+    "downwards": (
+      "color": rgba(208, 0, 0, 1),
+      "img": url(../images/svg/downward-trend.svg),
+      "label": "Downwards",
+      "name": "downwards",
+    ),
+  );
+
+  @each $label, $value in $images {
+    &.trend-#{$label} {
+      background-image: map-get($value, "img");
+      background-repeat: no-repeat;
+      background-size: 1em;
+
+      p {
+        color: map-get($value, "color");
+        margin-left: 20px;
+        margin-top: -1.5px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.invoice {
+  padding: 0.25rem;
+  border-radius: 4px;
+  text-transform: uppercase;
+  font-size: smaller;
+
+  $pills: (
+    "success": (
+      "background-color": rgba(41, 167, 67, 1),
+      "color": #ffffff,
+      "label": "Success",
+      "name": "success",
+    ),
+    "pending": (
+      "background-color": rgba(255, 224, 102, 1),
+      "color": rgba(129, 103, 0, 1),
+      "label": "Failed",
+      "name": "failed",
+    ),
+    "failed": (
+      "background-color": rgba(208, 0, 0, 1),
+      "color": #ffffff,
+      "label": "Failed",
+      "name": "failed",
+    ),
+  );
+
+  @each $label, $value in $pills {
+    &.invoice-#{$label} {
+      background-color: map-get($value, "background-color");
+      color: map-get($value, "color");
+    }
+  }
+}
+
+.status {
+  position: relative;
+  display: inline-flex;
+  text-align: center;
+  vertical-align: middle;
+  align-items: center;
+
+  $icons: (
+    "success": (
+      "color": #01C7B1,
+      "icon": "\2022",
+      "label": "Success",
+      "name": "success",
+    ),
+    "failed": (
+      "color": #CC2F26,
+      "icon": "\2022",
+      "label": "Failed",
+      "name": "failed",
+    ),
+    "pending": (
+      "color": #CC7700,
+      "icon": "\2022",
+      "label": "Pending",
+      "name": "pending",
+    ),
+    "none": (
+      "color": #5A6064,
+      "icon": "\2022",
+      "label": "None",
+      "name": "none",
+    ),
+  );
+
+  @each $label, $value in $icons {
+    &.status-#{$label} {
+      color: map-get($value, "color");
+      &.alt {
+        &::after {
+          content: " ";
+        }
+      }
+
+      &::after {
+        content: map-get($value, "label");
+      }
+
+      span {
+        &:first-child {
+          color: map-get($value, "color");
+          margin-right: 0.25rem;
+        }
+      }
+    }
+  }
+}
+
+.pill {
+  position: relative;
+  display: inline-flex;
+  font-weight: 400;
+  color: #364052;
+  text-align: center;
+  vertical-align: middle;
+  padding: 0.3rem 1rem;
+  border-radius: 2px;
+  align-items: center;
+  font-size: 13px;
+
+  $icons: (
+    "success": (
+      "color": rgb(0, 204, 142),
+      "background": rgba(0, 204, 142, 0.3),
+      "icon": "\f058",
+      "label": "Success",
+      "name": "success",
+    ),
+    "failed": (
+      "color": rgb(255, 59, 48),
+      "background": rgba(255, 59, 48, 0.3),
+      "icon": "\f057",
+      "label": "Failed",
+      "name": "failed",
+    ),
+    "pending": (
+      "color": rgb(255, 204, 0),
+      "background": rgba(255, 204, 0, 0.3),
+      "icon": "\f056",
+      "label": "Pending",
+      "name": "pending",
+    ),
+    "none": (
+      "color": #999,
+      "background": rgba(133, 133, 133, 0.3),
+      "icon": "\f056",
+      "label": "None",
+      "name": "none",
+    ),
+  );
+
+  @each $label, $value in $icons {
+    &.pill-#{$label} {
+      background-color: map-get($value, "background");
+      color: map-get($value, "color");
+
+      &.alt {
+        &::after {
+          content: " ";
+        }
+      }
+
+      &::after {
+        content: map-get($value, "label");
+        color: map-get($value, "color");
+      }
+
+      span {
+        font-family: Font Awesome\5 Free;
+        -webkit-font-smoothing: antialiased;
+        height: 9px;
+        width: 9px;
+        background: white;
+        color: map-get($value, "color");
+        font-size: 13px;
+        font-weight: bold;
+        border-radius: 50%;
+        line-height: 13px;
+        display: inline-block;
+        margin-right: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+
+        &::before {
+          content: map-get($value, "icon");
+          position: absolute;
+          // top: 0px;
+        }
+      }
+    }
+  }
+}
+
+.fee-pills {
+  padding: 0.2rem 0.8rem;
+  border-radius: 50rem;
+  font-size: 0.875em;
+
+  $pills: (
+    "paid": (
+      "background-color": $primary,
+      // 'color': #2e833c,
+      "color": white,
+      "label": "Paid",
+      "name": "paid",
+    ),
+    "part-payment": (
+      "background-color": #f7961c,
+      "color": white,
+      "label": "Part-payment",
+      "name": "part-payment",
+    ),
+    "unpaid": (
+      "background-color": #d36565,
+      "color": #d00000,
+      "label": "Unpaid",
+      "name": "unpaid",
+    ),
+  );
+
+  @each $label, $value in $pills {
+    &.#{$label} {
+      background-color: map-get($value, "background-color");
+      color: map-get($value, "color");
+    }
+  }
+}
+
+$objectConfig: 0, top, bottom, left, right;
+
+@each $tuple in $objectConfig {
+  .border-#{($tuple)}-muted {
+    border-#{($tuple)}: 1px solid #f2f3f4 !important;
+  }
+}
+
+@each $tuple in $objectConfig {
+  .border-#{($tuple)}-dashed {
+    border-#{($tuple)}: 1px dashed #dee2e6 !important;
+  }
+}
+
+/*--------------
+    Person: Name with Image or Initials
+---------------*/
+.person .person-image,
+[data-initials]::before,
+.with-flag::before {
+  content: attr(data-initials);
+  display: inline-block;
+  font-size: 0.9375rem;
+  width: 43px;
+  height: 43px;
+  line-height: 43px;
+  text-align: center;
+  background: #4fc3f7;
+  vertical-align: middle;
+  color: white;
+}
+
+.person .person-image,
+[data-initials]::before {
+  margin-right: 0.25em;
+  border-radius: 50%;
+}
+
+.person {
+  img {
+    display: none;
+  }
+
+  &.has-image {
+    position: relative;
+    display: inline-block;
+
+    .person-image {
+      position: relative;
+      overflow: hidden;
+
+      img {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%);
+        width: 100%;
+        height: auto;
+      }
+    }
+  }
+}
+
+// Circle with Image or Initials
+[data-initials]::before {
+  .has-image & {
+    display: none;
+  }
+}
+
+/*--------------
+    Item
+---------------*/
+.item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 1em 0em;
+  width: 100%;
+  min-height: 0px;
+  background: transparent;
+  padding: 0em;
+  border: none;
+  border-radius: 0rem;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  -webkit-transition: -webkit-box-shadow 0.1s ease;
+  transition: -webkit-box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease, -webkit-box-shadow 0.1s ease;
+  z-index: "";
+
+  a {
+    cursor: pointer;
+  }
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #eaebed;
+  padding: 8px 0;
+  margin-bottom: 20px;
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 3px;
+    width: 30px;
+    background: #01c7b1;
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    border-radius: 17px;
+  }
+
+  .login {
+    color: #9cabb8;
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+// Images
+.item > .image {
+  position: relative;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
+  display: block;
+  float: none;
+  margin: 0em;
+  padding: 0em;
+  max-height: "";
+  -ms-flex-item-align: top;
+  align-self: top;
+}
+
+.item > .image > img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.125rem;
+  border: none;
+}
+
+.item > .image:only-child > img {
+  border-radius: 0rem;
+}
+
+// Content
+.item > .content {
+  display: block;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  background: none;
+  margin: 0em;
+  padding: 0em;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  font-size: 1em;
+  border: none;
+  border-radius: 0em;
+}
+
+.item > .content:after {
+  display: block;
+  content: " ";
+  height: 0px;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.item > .image + .content {
+  min-width: 0;
+  width: auto;
+  display: block;
+  margin-left: 0em;
+  -ms-flex-item-align: top;
+  align-self: top;
+  padding-left: 1.5em;
+}
+
+.item > .content > .header {
+  display: inline-block;
+  margin: -0.21425em 0em 0em;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 1.28571429em;
+}
+
+// Content Image
+.item .content img {
+  -ms-flex-item-align: middle;
+  align-self: middle;
+  width: "";
+}
+
+.item img.avatar,
+.item .avatar img {
+  width: "";
+  height: "";
+  border-radius: 500rem;
+}
+
+// Meta
+.item .meta {
+  margin: 0.5em 0em 0.5em;
+  font-size: 1em;
+  line-height: 1em;
+  color: rgba(0, 0, 0, 0.6);
+  max-width: 558px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.item .meta * {
+  margin-right: 0.3em;
+}
+
+.item .meta :last-child {
+  margin-right: 0em;
+}
+
+.item .meta [class*="right floated"] {
+  margin-right: 0em;
+  margin-left: 0.3em;
+}
+
+$item-image-size: (
+  xs: 43px,
+  xsm: 64px,
+  sm: 80px,
+  md: 92px,
+);
+
+@each $label, $value in $item-image-size {
+  .#{$label}.image,
+  .#{$label}.images .image,
+  .#{$label}.images img,
+  .#{$label}.images svg {
+    width: $value;
+    height: auto;
+    font-size: 0.85714286rem;
+  }
+}
+
+@for $i from 1 through 10 {
+  .text-truncate-#{$i} {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: $i; /* number of lines to show */
+    line-clamp: $i;
+    -webkit-box-orient: vertical;
+    // height: calc(100vh - #{$i}px);
+  }
+}
+
+/*--------------
+    Order Badges
+---------------*/
+$badges: (
+  blue: (
+    "background": #edf8fc,
+    "color": #40b2dd,
+  ),
+  yellow: (
+    "background": #fffbeb,
+    "color": #edbf06,
+  ),
+  purple: (
+    "background": #ededff,
+    "color": #7978de,
+  ),
+  red: (
+    "background": #fdd7d5,
+    "color": #ff3b30,
+  ),
+  green: (
+    "background": #dbffdb,
+    "color": #088308,
+  ),
+  light-green: (
+    "background": #d9f8f5,
+    "color": #01c7b2,
+  ),
+  dark-blue: (
+    "background": #f0f7ff,
+    "color": #007aff,
+  ),
+  grey: (
+    "background": #f2f2f2,
+    "color": #b6c1ca,
+  ),
+);
+
+.order {
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 28px;
+
+  &.tiny {
+    padding: 0.25rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  @each $color, $value in $badges {
+    &.#{"" + $color} {
+      background-color: map-get($value, "background");
+      color: map-get($value, "color");
+    }
+  }
+}

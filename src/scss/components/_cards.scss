@@ -1,0 +1,46 @@
+.card {
+  margin-bottom: 10px;
+  border: 1px solid #efefef;
+  border-radius: 10px;
+
+  @include media-breakpoint-up(lg) {
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .card-body {
+    position: relative;
+
+    ul {
+      line-height: 2;
+    }
+  }
+
+  .card-header{
+    background: transparent;
+    border-bottom: none;
+  }
+
+  .card-image-top{
+    border-top-left-radius: 10px !important;
+    border-top-right-radius: 10px !important;
+  }
+
+  @include media-breakpoint-up(sm) {
+    .card-header,
+    .card-body,
+    .card-footer {
+      padding: ($card-spacer-x * 2);
+    }
+
+    &.card-md {
+      .card-header,
+      .card-body,
+      .card-footer {
+        padding-top: ($card-spacer-x * 1.5);
+        padding-bottom: ($card-spacer-x * 1.5);
+      }
+    }
+  }
+}

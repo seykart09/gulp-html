@@ -1,0 +1,1769 @@
+#navbarAsideContent {
+  padding-top: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 100vh;
+  // width: $sidebar-width; // box-shadow: 0 1px 30px 1px rgba(0, 0, 0, 0.11);
+  width: $sidebar-width; // box-shadow: 0 1px 30px 1px rgba(0, 0, 0, 0.11);
+  // transition: transform 0.3s, width 0.3s;
+  transition: all 0.5s ease;
+  overflow: hidden;
+  transform: translateX(calc(-100% - 20px));
+  background: $primary-alt;
+  // border-right: 1px solid $navbar-main-outline-border-color;
+
+  @include media-breakpoint-up(lg) {
+    transform: translateX(0);
+  }
+
+  .nav-scroller {
+    height: calc(100vh - 89px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: unset;
+
+    &::-webkit-scrollbar-track {
+      // -webkit-box-shadow: inset 0 0 6px #dee2e6;
+      border-radius: 6px;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      margin: 50px 0;
+      background-color: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 6px;
+      // -webkit-box-shadow: inset 0 0 6px #dee2e6;
+      background-color: #acaeaf;
+    }
+  }
+
+  // .md-nav-scroller {
+  //   height: calc(100vh - 280px);
+
+  //   display: flex;
+  //   flex-direction: column;
+  //   justify-content: space-between;
+  //   overflow: unset;
+
+  //   &::-webkit-scrollbar-track {
+  //     // -webkit-box-shadow: inset 0 0 6px #dee2e6;
+  //     border-radius: 6px;
+  //     background-color: transparent;
+  //   }
+
+  //   &::-webkit-scrollbar {
+  //     width: 8px;
+  //     margin: 50px 0;
+  //     background-color: transparent;
+  //   }
+
+  //   &::-webkit-scrollbar-thumb {
+  //     border-radius: 6px;
+  //     // -webkit-box-shadow: inset 0 0 6px #dee2e6;
+  //     background-color: #acaeaf;
+  //   }
+  // }
+
+  .navbar {
+    padding: 0;
+    display: block !important;
+    height: calc(100vh - 350px);
+  }
+
+  .navbar-nav {
+    gap: 5px;
+    padding: 0 20px;
+  }
+
+  .nav-item {
+    position: relative;
+
+    .nav-item {
+      margin-bottom: 0;
+
+      .nav-link {
+        p {
+          top: 9px;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 27px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 95%;
+        width: 4px;
+        border-left: 1px dashed #d1e4ee;
+        opacity: 1;
+        transition: all 0.3s;
+        z-index: 1;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 8px;
+        left: 36px;
+        top: 55%;
+        border-top: 1px solid #d1e4ee;
+      }
+    }
+
+    &:hover {
+      > .nav-link {
+        background-color: #063d80;
+        border-radius: 8px;
+
+        &.collapsed {
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+
+      > .ecg-nav-link {
+        background-color: #14134d;
+
+        &.collapsed {
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    &.active {
+      > .nav-link {
+        background-color: #063d80;
+        border-radius: 8px;
+
+        svg #feedback path {
+          fill: $white;
+        }
+
+        p {
+          color: $white;
+        }
+
+        svg,
+        svg .a {
+          // fill: $white;
+        }
+
+        svg path {
+          stroke: $white;
+        }
+
+        svg rect {
+          stroke: $white;
+        }
+
+        svg circle {
+          stroke: $white;
+        }
+
+        svg line {
+          stroke: $white;
+        }
+
+        svg polyline {
+          stroke: $white;
+        }
+
+        svg polygon {
+          stroke: $white;
+        }
+      }
+    }
+
+    &.ecg-active {
+      > .nav-link {
+        background-color: #14134d;
+
+        svg #feedback path {
+          fill: $white;
+        }
+
+        p {
+          color: $white;
+        }
+
+        svg,
+        svg .a {
+          // fill: $white;
+        }
+
+        svg path {
+          stroke: $white;
+        }
+
+        svg rect {
+          stroke: $white;
+        }
+
+        svg circle {
+          stroke: $white;
+        }
+
+        svg line {
+          stroke: $white;
+        }
+
+        svg polyline {
+          stroke: $white;
+        }
+
+        svg polygon {
+          stroke: $white;
+        }
+      }
+    }
+
+    a.active,
+    a.ecg-active {
+      border-left: 4px solid theme-color("primary");
+      color: theme-color("primary");
+
+      p {
+        color: $white;
+      }
+
+      svg,
+      svg .a {
+        fill: $white;
+      }
+
+      svg path {
+        stroke: $white;
+      }
+
+      svg line {
+        stroke: $white;
+      }
+
+      svg polyline {
+        stroke: $white;
+      }
+
+      svg polygon {
+        stroke: $white;
+      }
+    }
+
+    .dropdown-menu {
+      position: relative;
+      box-shadow: none;
+
+      @include media-breakpoint-up(lg) {
+        top: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: #fff;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      .dropdown-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+      }
+    }
+  }
+
+  .nav-link {
+    // height: 36px;
+    transition: all 0.3s;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    color: $white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+    border-radius: 8px;
+
+    .arrow {
+      display: inline-block;
+      padding: 1.5px 5px;
+      color: $body-color;
+      height: 8px;
+    }
+
+    &[data-toggle].collapsed:before,
+    &[data-toggle].collapsed:after,
+    &[data-toggle]:not(.collapsed):after,
+    &[data-toggle]:not(.collapsed):before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: 114px;
+      border: 4px solid transparent;
+      z-index: 2;
+    }
+
+    &[data-toggle="collapse"].collapsed:before,
+    &[data-toggle]:not(.collapsed):before {
+      top: 50%;
+      margin-top: 2px;
+      transform: translateY(-50%);
+      border-top-color: #7e8fa4;
+    }
+
+    &[data-toggle="collapse"].collapsed:after,
+    &[data-toggle]:not(.collapsed):after {
+      top: 50%;
+      margin-top: 0;
+      transform: translateY(-50%);
+      border-top-color: #fff;
+    }
+
+    p {
+      width: 100%;
+      transition: left 0.3s;
+      position: absolute;
+      left: 50px;
+      top: 21px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+
+    svg rect,
+    svg circle,
+    svg .a,
+    svg polygon,
+    svg line,
+    svg polyline,
+    svg path {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      text-decoration: none; // background-color: $navbar-light-active-color;
+
+      p {
+        color: $white;
+      }
+
+      svg,
+      svg .a {
+        fill: $white;
+      }
+
+      svg path {
+        stroke: $white;
+      }
+
+      svg circle {
+        stroke: $white;
+      }
+
+      svg line {
+        stroke: $white;
+      }
+
+      svg polyline {
+        stroke: $white;
+      }
+
+      svg rect {
+        stroke: $white;
+      }
+
+      svg polygon {
+        stroke: $white;
+      }
+    }
+  }
+
+  .custom-nav-item {
+    position: relative;
+
+    .nav-item {
+      margin-bottom: 0;
+
+      .nav-link {
+        p {
+          top: 9px;
+        }
+      }
+
+      &:before {
+        content: "";
+        position: absolute;
+        left: 27px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 95%;
+        width: 4px;
+        border-left: 1px dashed #d1e4ee;
+        opacity: 1;
+        transition: all 0.3s;
+        z-index: 1;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        height: 1px;
+        width: 8px;
+        left: 36px;
+        top: 17px;
+        border-top: 1px solid #d1e4ee;
+      }
+
+      ul > li {
+        &:before {
+          content: "";
+          position: absolute;
+          left: 41px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 95%;
+          width: 4px;
+          border-left: 1px dashed #d1e4ee;
+          opacity: 1;
+          transition: all 0.3s;
+          z-index: 1;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 14px;
+          left: 47px;
+          top: 17px;
+          border-top: 1px dashed #d1e4ee;
+        }
+
+        &:hover {
+          > .nav-link2 {
+            background-color: #063d80;
+            border-radius: 8px;
+
+            &.collapsed {
+              &:hover {
+                background-color: transparent;
+              }
+            }
+          }
+        }
+
+        &.active {
+          > .nav-link2 {
+            background-color: #063d80;
+            border-radius: 8px;
+
+            svg #feedback path {
+              fill: $white;
+            }
+
+            p {
+              color: $white;
+            }
+
+            svg,
+            svg .a {
+              fill: $white;
+            }
+
+            svg path {
+              stroke: $white;
+            }
+
+            svg rect {
+              stroke: $white;
+            }
+
+            svg circle {
+              stroke: $white;
+            }
+
+            svg line {
+              stroke: $white;
+            }
+
+            svg polyline {
+              stroke: $white;
+            }
+
+            svg polygon {
+              stroke: $white;
+            }
+          }
+        }
+
+        a.active {
+          border-left: 4px solid theme-color("primary");
+          color: theme-color("primary");
+
+          p {
+            color: $white;
+          }
+
+          svg,
+          svg .a {
+            fill: $white;
+          }
+
+          svg path {
+            stroke: $white;
+          }
+
+          svg line {
+            stroke: $white;
+          }
+
+          svg polyline {
+            stroke: $white;
+          }
+
+          svg polygon {
+            stroke: $white;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      > .nav-link {
+        background-color: #063d80;
+
+        &.collapsed {
+          &:hover {
+            background-color: transparent;
+          }
+        }
+      }
+    }
+
+    &.active {
+      > .nav-link {
+        background-color: #1b5480;
+
+        svg #feedback path {
+          fill: $white;
+        }
+
+        p {
+          color: $white;
+        }
+
+        svg,
+        svg .a {
+          fill: $white;
+        }
+
+        svg path {
+          stroke: $white;
+        }
+
+        svg rect {
+          stroke: $white;
+        }
+
+        svg circle {
+          stroke: $white;
+        }
+
+        svg line {
+          stroke: $white;
+        }
+
+        svg polyline {
+          stroke: $white;
+        }
+
+        svg polygon {
+          stroke: $white;
+        }
+      }
+    }
+
+    a.active {
+      border-left: 4px solid theme-color("primary");
+      color: theme-color("primary");
+
+      p {
+        color: $white;
+      }
+
+      svg,
+      svg .a {
+        fill: $white;
+      }
+
+      svg path {
+        stroke: $white;
+      }
+
+      svg line {
+        stroke: $white;
+      }
+
+      svg polyline {
+        stroke: $white;
+      }
+
+      svg polygon {
+        stroke: $white;
+      }
+    }
+
+    .dropdown-menu {
+      position: relative;
+      box-shadow: none;
+
+      @include media-breakpoint-up(lg) {
+        top: 0;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 4px;
+        background: #fff;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+
+      .dropdown-item {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 50px;
+      }
+    }
+  }
+
+  .nav-link2 {
+    // height: 36px;
+    transition: all 0.3s;
+    position: relative;
+    cursor: pointer;
+    padding: 0;
+    overflow: hidden;
+    color: $white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 20px 0;
+
+    .arrow {
+      display: inline-block;
+      padding: 1.5px 5px;
+      color: $body-color;
+      height: 8px;
+    }
+
+    &[data-toggle].collapsed:before,
+    &[data-toggle].collapsed:after,
+    &[data-toggle]:not(.collapsed):after,
+    &[data-toggle]:not(.collapsed):before {
+      content: "";
+      position: absolute;
+      display: block;
+      width: 0;
+      height: 0;
+      left: 114px;
+      border: 4px solid transparent;
+      z-index: 2;
+    }
+
+    &[data-toggle="collapse"].collapsed:before,
+    &[data-toggle]:not(.collapsed):before {
+      top: 50%;
+      margin-top: 2px;
+      transform: translateY(-50%);
+      border-top-color: #7e8fa4;
+    }
+
+    &[data-toggle="collapse"].collapsed:after,
+    &[data-toggle]:not(.collapsed):after {
+      top: 50%;
+      margin-top: 0;
+      transform: translateY(-50%);
+      border-top-color: #fff;
+    }
+
+    p {
+      width: 100%;
+      transition: left 0.3s;
+      position: absolute;
+      left: 70px;
+      top: 10px;
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+    }
+
+    svg rect,
+    svg circle,
+    svg .a,
+    svg polygon,
+    svg line,
+    svg polyline,
+    svg path {
+      transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+      text-decoration: none; // background-color: $navbar-light-active-color;
+
+      p {
+        color: $white;
+      }
+
+      svg,
+      svg .a {
+        fill: $white;
+      }
+
+      svg path {
+        stroke: $white;
+      }
+
+      svg circle {
+        stroke: $white;
+      }
+
+      svg line {
+        stroke: $white;
+      }
+
+      svg polyline {
+        stroke: $white;
+      }
+
+      svg rect {
+        stroke: $white;
+      }
+
+      svg polygon {
+        stroke: $white;
+      }
+    }
+  }
+
+  .nav-link-title {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 16px;
+    position: relative;
+
+    @include media-breakpoint-up(sm) {
+      display: flex;
+    }
+  }
+
+  .nav-link-icon {
+    width: 18px;
+    height: 18px;
+    margin-left: 20px;
+    font-size: 13px;
+    line-height: 13px;
+    color: $text-color;
+    display: block;
+
+    svg {
+      width: 100%;
+      height: auto;
+
+      &,
+      .a {
+        // fill: $text-color;
+      }
+    }
+  }
+
+  &.sidebar--small {
+    transform: translateX(0);
+    overflow: unset;
+
+    @include media-breakpoint-down(lg) {
+      z-index: 1330;
+    }
+  }
+
+  @include media-breakpoint-up(lg) {
+    &.sidebar--small {
+      // width: $sidebar-width-collapsed;
+      overflow: visible;
+
+      .sidebar__content {
+        // width: $sidebar-width-collapsed;
+        overflow: visible !important;
+        transition: width 0.3s;
+      }
+
+      .nav-link {
+        overflow: hidden;
+        // width: $sidebar-width-collapsed;
+        background-color: transparent;
+
+        p {
+          position: absolute;
+          left: 65px;
+          width: 100%;
+          transition: left 0.3s;
+        }
+
+        .dropdown-toggle {
+          &::before,
+          &::after {
+            display: none;
+          }
+        }
+
+        &:hover {
+          width: 260px;
+          background-color: theme-color("primary");
+          color: #fff;
+
+          svg,
+          svg .a {
+            fill: #fff;
+          }
+
+          svg path {
+            stroke: #fff;
+          }
+
+          svg line {
+            stroke: #fff;
+          }
+
+          svg polyline {
+            stroke: #fff;
+          }
+
+          svg rect {
+            stroke: #fff;
+          }
+
+          svg polygon {
+            stroke: #fff;
+          }
+
+          p {
+            left: 50px;
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sidebar--small {
+  .mobile-toggle {
+    opacity: 1;
+  }
+}
+
+.mobile-toggle {
+  @media (max-width: 768px) {
+    position: absolute;
+    right: -71px;
+    padding: 18px 27px;
+    opacity: 0;
+
+    i {
+      font-size: 24px;
+    }
+  }
+}
+
+#education,
+#agency-portal,
+#citizen-portal,
+#customer-login {
+  #navbarAsideContent {
+    padding-top: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    height: 100vh;
+    width: $sidebar-width; // box-shadow: 0 1px 30px 1px rgba(0, 0, 0, 0.11);
+    // transition: transform 0.3s, width 0.3s;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    transform: translateX(calc(-100% - 20px));
+    background: $primary-alt;
+    // border-right: 1px solid $navbar-main-outline-border-color;
+
+    @include media-breakpoint-up(lg) {
+      transform: translateX(0);
+    }
+
+    .nav-scroller {
+      height: calc(100vh - 89px);
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: unset;
+
+      &::-webkit-scrollbar-track {
+        // -webkit-box-shadow: inset 0 0 6px #dee2e6;
+        border-radius: 6px;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar {
+        width: 8px;
+        margin: 50px 0;
+        background-color: transparent;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        border-radius: 6px;
+        // -webkit-box-shadow: inset 0 0 6px #dee2e6;
+        background-color: #acaeaf;
+      }
+    }
+
+    .navbar {
+      padding: 0;
+    }
+
+    .navbar-nav {
+      gap: 5px;
+      padding: 0 20px;
+    }
+
+    .nav-item {
+      position: relative;
+
+      .nav-item {
+        margin-bottom: 0;
+
+        .nav-link {
+          p {
+            top: 10px;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 27px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 95%;
+          width: 4px;
+          border-left: 1px dashed #d1e4ee;
+          opacity: 1;
+          transition: all 0.3s;
+          z-index: 1;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 8px;
+          left: 36px;
+          top: 55%;
+          border-top: 1px solid #d1e4ee;
+        }
+      }
+
+      &:hover {
+        > .nav-link {
+          background-color: #063d80;
+          border-radius: 8px;
+
+          &.collapsed {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      &.active {
+        > .nav-link {
+          background-color: #063d80;
+          border-radius: 8px;
+
+          svg #feedback path {
+            fill: $white;
+          }
+
+          p {
+            color: $white;
+          }
+
+          svg,
+          svg .a {
+            // fill: $white;
+          }
+
+          svg path {
+            stroke: $white;
+          }
+
+          svg rect {
+            stroke: $white;
+          }
+
+          svg circle {
+            stroke: $white;
+          }
+
+          svg line {
+            stroke: $white;
+          }
+
+          svg polyline {
+            stroke: $white;
+          }
+
+          svg polygon {
+            stroke: $white;
+          }
+        }
+      }
+
+      a.active {
+        border-left: 4px solid theme-color("primary");
+        color: theme-color("primary");
+
+        p {
+          color: $white;
+        }
+
+        svg,
+        svg .a {
+          fill: $white;
+        }
+
+        svg path {
+          stroke: $white;
+        }
+
+        svg line {
+          stroke: $white;
+        }
+
+        svg polyline {
+          stroke: $white;
+        }
+
+        svg polygon {
+          stroke: $white;
+        }
+      }
+
+      .dropdown-menu {
+        position: relative;
+        box-shadow: none;
+
+        @include media-breakpoint-up(lg) {
+          top: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 4px;
+          background: #fff;
+          opacity: 0;
+          transition: all 0.3s;
+        }
+
+        .dropdown-item {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 50px;
+        }
+      }
+    }
+
+    .nav-link {
+      // height: 36px;
+      transition: all 0.3s;
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      overflow: hidden;
+      color: $white;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+
+      .arrow {
+        display: inline-block;
+        padding: 1.5px 5px;
+        color: $body-color;
+        height: 8px;
+      }
+
+      &[data-toggle].collapsed:before,
+      &[data-toggle].collapsed:after,
+      &[data-toggle]:not(.collapsed):after,
+      &[data-toggle]:not(.collapsed):before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        left: 114px;
+        border: 4px solid transparent;
+        z-index: 2;
+      }
+
+      &[data-toggle="collapse"].collapsed:before,
+      &[data-toggle]:not(.collapsed):before {
+        top: 50%;
+        margin-top: 2px;
+        transform: translateY(-50%);
+        border-top-color: #7e8fa4;
+      }
+
+      &[data-toggle="collapse"].collapsed:after,
+      &[data-toggle]:not(.collapsed):after {
+        top: 50%;
+        margin-top: 0;
+        transform: translateY(-50%);
+        border-top-color: #fff;
+      }
+
+      p {
+        width: 100%;
+        transition: left 0.3s;
+        position: absolute;
+        left: 50px;
+        top: 21px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+      }
+
+      svg rect,
+      svg circle,
+      svg .a,
+      svg polygon,
+      svg line,
+      svg polyline,
+      svg path {
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none; // background-color: $navbar-light-active-color;
+
+        p {
+          color: $white;
+        }
+
+        svg,
+        svg .a {
+          fill: $white;
+        }
+
+        svg path {
+          stroke: $white;
+        }
+
+        svg circle {
+          stroke: $white;
+        }
+
+        svg line {
+          stroke: $white;
+        }
+
+        svg polyline {
+          stroke: $white;
+        }
+
+        svg rect {
+          stroke: $white;
+        }
+
+        svg polygon {
+          stroke: $white;
+        }
+      }
+    }
+
+    .custom-nav-item {
+      position: relative;
+
+      .nav-item {
+        margin-bottom: 0;
+
+        .nav-link {
+          p {
+            top: 9px;
+          }
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: 27px;
+          top: 50%;
+          transform: translateY(-50%);
+          height: 95%;
+          width: 4px;
+          border-left: 1px dashed #d1e4ee;
+          opacity: 1;
+          transition: all 0.3s;
+          z-index: 1;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          height: 1px;
+          width: 8px;
+          left: 36px;
+          top: 17px;
+          border-top: 1px solid #d1e4ee;
+        }
+
+        ul > li {
+          &:before {
+            content: "";
+            position: absolute;
+            left: 41px;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 95%;
+            width: 4px;
+            border-left: 1px dashed #d1e4ee;
+            opacity: 1;
+            transition: all 0.3s;
+            z-index: 1;
+          }
+
+          &:after {
+            content: "";
+            position: absolute;
+            height: 1px;
+            width: 14px;
+            left: 47px;
+            top: 17px;
+            border-top: 1px dashed #d1e4ee;
+          }
+
+          &:hover {
+            > .nav-link2 {
+              background-color: #1b5480;
+
+              &.collapsed {
+                &:hover {
+                  background-color: transparent;
+                }
+              }
+            }
+          }
+
+          &.active {
+            > .nav-link2 {
+              background-color: #1b5480;
+
+              svg #feedback path {
+                fill: $white;
+              }
+
+              p {
+                color: $white;
+              }
+
+              svg,
+              svg .a {
+                fill: $white;
+              }
+
+              svg path {
+                stroke: $white;
+              }
+
+              svg rect {
+                stroke: $white;
+              }
+
+              svg circle {
+                stroke: $white;
+              }
+
+              svg line {
+                stroke: $white;
+              }
+
+              svg polyline {
+                stroke: $white;
+              }
+
+              svg polygon {
+                stroke: $white;
+              }
+            }
+          }
+
+          a.active {
+            border-left: 4px solid theme-color("primary");
+            color: theme-color("primary");
+
+            p {
+              color: $white;
+            }
+
+            svg,
+            svg .a {
+              fill: $white;
+            }
+
+            svg path {
+              stroke: $white;
+            }
+
+            svg line {
+              stroke: $white;
+            }
+
+            svg polyline {
+              stroke: $white;
+            }
+
+            svg polygon {
+              stroke: $white;
+            }
+          }
+        }
+      }
+
+      &:hover {
+        > .nav-link {
+          background-color: #1b5480;
+
+          &.collapsed {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      &.active {
+        > .nav-link {
+          background-color: #1b5480;
+
+          svg #feedback path {
+            fill: $white;
+          }
+
+          p {
+            color: $white;
+          }
+
+          svg,
+          svg .a {
+            fill: $white;
+          }
+
+          svg path {
+            stroke: $white;
+          }
+
+          svg rect {
+            stroke: $white;
+          }
+
+          svg circle {
+            stroke: $white;
+          }
+
+          svg line {
+            stroke: $white;
+          }
+
+          svg polyline {
+            stroke: $white;
+          }
+
+          svg polygon {
+            stroke: $white;
+          }
+        }
+      }
+
+      a.active {
+        border-left: 4px solid theme-color("primary");
+        color: theme-color("primary");
+
+        p {
+          color: $white;
+        }
+
+        svg,
+        svg .a {
+          fill: $white;
+        }
+
+        svg path {
+          stroke: $white;
+        }
+
+        svg line {
+          stroke: $white;
+        }
+
+        svg polyline {
+          stroke: $white;
+        }
+
+        svg polygon {
+          stroke: $white;
+        }
+      }
+
+      .dropdown-menu {
+        position: relative;
+        box-shadow: none;
+
+        @include media-breakpoint-up(lg) {
+          top: 0;
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 4px;
+          background: #fff;
+          opacity: 0;
+          transition: all 0.3s;
+        }
+
+        .dropdown-item {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          padding-left: 50px;
+        }
+      }
+    }
+
+    .nav-link2 {
+      // height: 36px;
+      transition: all 0.3s;
+      position: relative;
+      cursor: pointer;
+      padding: 0;
+      overflow: hidden;
+      color: $white;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 20px 0;
+
+      .arrow {
+        display: inline-block;
+        padding: 1.5px 5px;
+        color: $body-color;
+        height: 8px;
+      }
+
+      &[data-toggle].collapsed:before,
+      &[data-toggle].collapsed:after,
+      &[data-toggle]:not(.collapsed):after,
+      &[data-toggle]:not(.collapsed):before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        left: 114px;
+        border: 4px solid transparent;
+        z-index: 2;
+      }
+
+      &[data-toggle="collapse"].collapsed:before,
+      &[data-toggle]:not(.collapsed):before {
+        top: 50%;
+        margin-top: 2px;
+        transform: translateY(-50%);
+        border-top-color: #7e8fa4;
+      }
+
+      &[data-toggle="collapse"].collapsed:after,
+      &[data-toggle]:not(.collapsed):after {
+        top: 50%;
+        margin-top: 0;
+        transform: translateY(-50%);
+        border-top-color: #fff;
+      }
+
+      p {
+        width: 100%;
+        transition: left 0.3s;
+        position: absolute;
+        left: 70px;
+        top: 10px;
+        white-space: nowrap;
+        display: flex;
+        align-items: center;
+      }
+
+      svg rect,
+      svg circle,
+      svg .a,
+      svg polygon,
+      svg line,
+      svg polyline,
+      svg path {
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        text-decoration: none; // background-color: $navbar-light-active-color;
+
+        p {
+          color: $white;
+        }
+
+        svg,
+        svg .a {
+          fill: $white;
+        }
+
+        svg path {
+          stroke: $white;
+        }
+
+        svg circle {
+          stroke: $white;
+        }
+
+        svg line {
+          stroke: $white;
+        }
+
+        svg polyline {
+          stroke: $white;
+        }
+
+        svg rect {
+          stroke: $white;
+        }
+
+        svg polygon {
+          stroke: $white;
+        }
+      }
+    }
+
+    .nav-link-title {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 16px;
+      position: relative;
+
+      @include media-breakpoint-up(sm) {
+        display: flex;
+      }
+    }
+
+    .nav-link-icon {
+      width: 18px;
+      height: 18px;
+      margin-left: 20px;
+      font-size: 13px;
+      line-height: 13px;
+      color: $text-color;
+      display: block;
+
+      svg {
+        width: 100%;
+        height: auto;
+
+        &,
+        .a {
+          // fill: $text-color;
+        }
+      }
+    }
+
+    &.sidebar--small {
+      transform: translateX(0);
+      overflow: unset;
+
+      @include media-breakpoint-down(lg) {
+        z-index: 1330;
+      }
+    }
+
+    @include media-breakpoint-up(lg) {
+      &.sidebar--small {
+        width: $sidebar-width-collapsed;
+        overflow: visible;
+
+        .sidebar__content {
+          width: $sidebar-width-collapsed;
+          overflow: visible !important;
+          transition: width 0.3s;
+        }
+
+        .nav-link {
+          overflow: hidden;
+          width: $sidebar-width-collapsed;
+          background-color: transparent;
+
+          p {
+            position: absolute;
+            left: 65px;
+            width: 100%;
+            transition: left 0.3s;
+          }
+
+          .dropdown-toggle {
+            &::before,
+            &::after {
+              display: none;
+            }
+          }
+
+          &:hover {
+            width: 100%;
+            background-color: theme-color("primary");
+            color: #fff;
+
+            svg,
+            svg .a {
+              fill: #fff;
+            }
+
+            svg path {
+              stroke: #fff;
+            }
+
+            svg line {
+              stroke: #fff;
+            }
+
+            svg polyline {
+              stroke: #fff;
+            }
+
+            svg rect {
+              stroke: #fff;
+            }
+
+            svg polygon {
+              stroke: #fff;
+            }
+
+            p {
+              left: 50px;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#agency-portal,
+#citizen-portal {
+  #navbarAsideContent {
+    .nav-item {
+      &:hover {
+        > .nav-link {
+          background-color: #5a6064;
+          border-radius: 8px;
+
+          &.collapsed {
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+
+      &.active {
+        > .nav-link {
+          background-color: #5a6064;
+          border-radius: 8px;
+
+          svg #feedback path {
+            fill: $white;
+          }
+
+          p {
+            color: $white;
+          }
+
+          svg,
+          svg .a {
+            // fill: $white;
+          }
+
+          svg path {
+            stroke: $white;
+          }
+
+          svg rect {
+            stroke: $white;
+          }
+
+          svg circle {
+            stroke: $white;
+          }
+
+          svg line {
+            stroke: $white;
+          }
+
+          svg polyline {
+            stroke: $white;
+          }
+
+          svg polygon {
+            stroke: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+#assembly-portal {
+}

@@ -1,0 +1,85 @@
+$font-family-base: 'Nunito', sans-serif;
+
+// $border-radius: 30px;
+
+// Body
+$body-color: #000000;
+$body-bg: #ffffff;
+
+$input-btn-font-family: $font-family-base;
+
+// Grid
+$grid-gutter-width: 12px;
+
+// Sidebar
+$sidebar-width: 260px;
+$sidebar-width-collapsed: 55px;
+
+// Colors
+$primary: #01c7b1;
+$primary-alt: #082e4d;
+$secondary: #F4F4F4;
+$white: #fff;
+$danger: #D00000;
+
+$deep-primary: #226666;
+$faded-blue: #F2F7FA;
+$faded-gold: #FCF9EA;
+$faded-pink: #FCEAEA;
+$faded-silver: #d5dcdf;
+$faded-bronze: #e8bd9c;
+
+//verification levels
+// $bronze:
+// $silver:
+// $gold:
+// $platinum:
+
+$theme-colors: (
+  primary: #01c7b1,
+  deep-primary: #009f9f,
+  danger: #D00000,
+  warning: #664d03,
+  faded-blue: #609ec4,
+  faded-gold: #c4b160,
+  faded-pink: #c46060,
+  faded-silver: #d5dcdf,
+  faded-bronze: #e8bd9c,
+  dark:#000
+);
+
+$slate-gray-light: #d3e4ef;
+$slate-gray: #7e8fa4;
+$badge-bg-blue: #00baef;
+
+$colors: (
+  slate-gray: $slate-gray,
+  slate-gray-light: $slate-gray-light,
+  faded-gold: #fee79b,
+  faded-silver: #d5dcdf,
+  faded-bronze: #e8bd9c,
+  dark:#000
+);
+
+
+ $enable-negative-margins: true;
+
+$text-color: $body-color;
+$text-muted: $slate-gray;
+$link-color: $primary;
+
+// Main Navbar
+$navbar-main-outline-border-color: #e6eaed;
+$navbar-main-color: $body-color;
+$navbar-main-active-color: #f7f8fb;
+$navbar-main-toggler-border-color: $slate-gray-light;
+$navbar-toggler-size: 1rem;
+$navbar-link-padding-x: 1.25rem;
+
+// Container
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 1280px,
+  xl: 1430px,
+);
