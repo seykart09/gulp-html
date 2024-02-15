@@ -1,0 +1,282 @@
+<!-- Navbar -->
+<nav class="navbar px-md-3 px-1 navbar-expand-lg justify-content-start border-0 navbar-main align-items-center shadow-sm">
+
+  <button class='topbar__button me-0 me-md-3 d-block d-lg-none' aria-expanded="false" aria-label="Toggle Sidebar">
+    <svg xmlns="http://www.w3.org/2000/svg" width="32.395" class="topbar__button-icon mt-0" height="29.048"
+      viewBox="0 0 32.395 29.048">
+      <g id="Untitled-1" transform="translate(0.006 -1.871)">
+        <path id="Path_1" data-name="Path 1"
+          d="M.5,1.993a2.413,2.413,0,0,1,.764-.122,2.529,2.529,0,0,1,.263.014H31.309l.069,0a1.129,1.129,0,0,1,.843.377h0a1,1,0,0,1,.167.553.966.966,0,0,1-.013.162V5.749a.95.95,0,0,1,.012.156.994.994,0,0,1-.15.527l0,0a1.129,1.129,0,0,1-.845.38c-.03,0-.06,0-.089,0H1.519a2.483,2.483,0,0,1-.253.012A2.6,2.6,0,0,1,.5,6.7l.018.005A.825.825,0,0,1,0,6.133V2.594a.84.84,0,0,1,.5-.6l.006,0Z"/>
+        <path id="Path_2" data-name="Path 2"
+          d="M.529,14.035a2.524,2.524,0,0,1,.993-.1H31.307c.58-.026,1.075.365,1.056.781v3.145a.686.686,0,0,1,.014.144.88.88,0,0,1-.248.582l.01-.012a1.2,1.2,0,0,1-.907.287H1.007a.982.982,0,0,1-1.013-.674V14.646c.012-.234.21-.447.535-.616l0,0Z"/>
+        <path id="Path_3" data-name="Path 3"
+          d="M0,26.692a.966.966,0,0,1,.931-.715c.027,0,.055,0,.081,0h30.3l.064,0a1.136,1.136,0,0,1,.809.337h0a.749.749,0,0,1,.19.5c0,.019,0,.039,0,.058v3.285c.013.414-.5.781-1.065.753H1.074a1.022,1.022,0,0,1-.128.008A1,1,0,0,1,0,30.244l0-.007Z"/>
+      </g>
+    </svg>
+  </button>
+  <div class="navbar-brand me-auto align-items-center ms-0 d-flex w-auto">
+    <div class="d-none d-md-block">
+      <div class="d-flex ps-1 ps-xl-0">
+        <button class="btn py-0 px-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15.338" height="16.652" viewBox="0 0 18.338 19.652">
+            <g id="Back" transform="translate(2 2.826)">
+              <path id="Path_9" data-name="Path 9" d="M467.137,55H452.8" transform="translate(-452.799 -48)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="4"/>
+              <path id="Path_10" data-name="Path 10" d="M458.085,44.632l-7.617,7,7.617,7" transform="translate(-450.469 -44.632)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+            </g>
+          </svg>
+        </button>
+        <button class="btn py-0 disabled px-0">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15.338" height="16.652" viewBox="0 0 18.338 19.652">
+            <g id="Forward" transform="translate(2 2.826)">
+              <path id="Path_9" data-name="Path 9" d="M452.8,55h14.338" transform="translate(-452.799 -48)" fill="none" stroke="#707070" stroke-linecap="round" stroke-width="4"/>
+              <path id="Path_10" data-name="Path 10" d="M450.469,44.632l7.617,7-7.617,7" transform="translate(-443.747 -44.632)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+            </g>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+    <div class="ms-0 ms-md-2">
+      <h5 class="mb-0 font-weight-bold">{{ title }}
+        <span class="text-muted {%if not subtitle %}d-none {% endif %}">
+          <span class="d-none d-lg-inline">/{{subtitle}}</span>
+          <span class="text-muted {%if not subtitle2 %}d-none {% endif %}">
+            <span class="d-none d-lg-inline">/{{subtitle2}}</span></span>
+        </h5>
+
+      </div>
+
+    </div>
+
+    <div class="d-flex align-items-center">
+      <div class="dropdown me-3">
+        <button class="btn btn-outline-dark dropdown-toggle py-1 rounded-pill d-none d-md-block" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+        Create New
+      </button>
+        <a href="#" class="text-decoration-none d-block d-md-none" data-bs-toggle="dropdown">
+          <div class="position-relative">
+            <img width="25" src="{{ url }}/assets/images/svg/create-new.svg" alt="create-new">
+          </div>
+        </a>
+        <ul class="dropdown-menu dropdown-menu-end create-list" aria-labelledby="dropdownMenuButton1" style="z-index:300000000">
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/sms/compose-sms.html"><img width="15" src="{{ url }}/assets/images/svg/envelope-add.svg" class="me-2" alt="sms-msg">SMS Message</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/payments/simple-invoice.html"><img width="15" src="{{ url }}/assets/images/svg/money-withdraw-black.svg" class="me-2" alt="simple-invoice">Simple Invoice</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/payments/full-invoices.html"><img width="15" src="{{ url }}/assets/images/svg/invoice.svg" class="me-2" alt="full-invoice">Full Invoice</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/payments/automated-debits.html"><img width="15" src="{{ url }}/assets/images/svg/file-timer.svg" class="me-2" alt="auto-debit">Automated Debit</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/payments/bulk-payments.html"><img width="15" src="{{ url }}/assets/images/svg/bulk_payments.svg" class="me-2" alt="bulk-payments">Bulk Payments</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/money/accounts.html"><img width="15" src="{{ url }}/assets/images/svg/wallet.svg" class="me-2" alt="auto-debit">Prepaid Top Up</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/money/transfers.html"><img width="15" src="{{ url }}/assets/images/svg/building.svg" class="me-2" alt="auto-debit">Bank/Momo Transfer</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/money/transfers.html"><img width="15" src="{{ url }}/assets/images/svg/account-transfer.svg" class="me-2" alt="auto-debit">Intra-Account Transfer</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/money/transfers.html"><img width="15" src="{{ url }}/assets/images/svg/moneybag-alt.svg" class="me-2" alt="auto-debit">Customer Balance Top Up</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/money/transfers.html"><img width="15" src="{{ url }}/assets/images/svg/pay-merchant.svg" class="me-2" alt="auto-debit">Pay Another Merchant</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/money/pay.html"><img width="15" src="{{ url }}/assets/images/svg/truck.svg" class="me-2" alt="auto-debit">Pay Supplier</a>
+          </li>
+          <li>
+            <a class="dropdown-item" href="{{ baseUrl }}/money/pay.html"><img width="15" src="{{ url }}/assets/images/svg/employees.svg" class="me-2" alt="auto-debit">Pay Employee</a>
+          </li>
+        </ul>
+      </div>
+      <div class="notif-menu dropdown me-3 me-lg-0">
+        <a href="#" class="text-decoration-none" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+          <div class="position-relative">
+            <img width="25" src="{{ url }}/assets/images/svg/Notifications.svg" alt="notification">
+            <span class="position-absolute translate-middle p-1 bg-danger border border-light rounded-circle" style="right: -7px; top: 3px;">
+              <span class="visually-hidden">New alerts</span>
+            </span>
+          </div>
+        </a>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton">
+          <div>
+            <nav>
+              <div class="nav notification-tabs nav-tabs" id="nav-tab" role="tablist">
+                <button class="nav-link active" id="notifications-tab" data-bs-toggle="tab" data-bs-target="#notifications" type="button" role="tab" aria-controls="notifications" aria-selected="true">Notifications <span class="badge">4</span></button>
+                <button class="nav-link" id="hubtel-tab" data-bs-toggle="tab" data-bs-target="#hubtel" type="button" role="tab" aria-controls="hubtel" aria-selected="false">From Hubtel <span class="badge">4</span></button>
+              </div>
+            </nav>
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="notifications" role="tabpanel" aria-labelledby="notifications-tab">
+                <ul class="list-unstyled mb-0" id="scroll">
+                  <li class="border-bottom" data-bs-target="#notifModal" data-bs-toggle="modal">
+                    <div class="px-4 py-3">
+                      <div class="d-flex">
+                        <i class="fa fa-circle mt-1 text-primary" style="font-size:0.5em"></i>
+                        <div class="ms-2">
+                          <div>
+                            <p class="mb-0 text-truncate-1 small font-weight-bold">We’re giving you a Christmas SMS Bonus.</p>
+                            <p class="text-muted mb-0 small text-truncate-2 small">Hubtel is rewarding its loyal accounts with great prizes this weekend. You can redeem these…</p>
+                            <a href="#" class="text-decoration-none mt-2 small">Check <i class="fa fa-arrow-right"></i>
+                            </a>
+                          </div>
+                          <p class="text-muted mb-0 mt-2 small">Dec 25, 2022 at 10:23 AM</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="border-bottom">
+                    <div class="px-4 py-3">
+                      <div class="d-flex">
+                        <i class="fa fa-circle mt-1 text-primary" style="font-size:0.5em"></i>
+                        <div class="ms-2">
+                          <div>
+                            <p class="mb-0 text-truncate-1 small font-weight-bold">
+                              <span class="order tiny red px-2 small">Danger</span></p>
+                            <p class="text-muted mb-0 small text-truncate-2 small">Hubtel is rewarding its loyal accounts with great prizes this weekend. You can redeem these…</p>
+                            <a href="#" class="text-decoration-none mt-2 small">Check <i class="fa fa-arrow-right"></i>
+                            </a>
+                          </div>
+                          <p class="text-muted mb-0 mt-2 small">Dec 25, 2022 at 10:23 AM</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </li>
+                  <li class="border-bottom">
+                    <div class="px-4 py-3">
+                      <div class="d-flex">
+                        <div class="ms-2">
+                          <div>
+                            <p class="mb-0 text-truncate-1 small">Monthly Reports.</p>
+                            <p class="text-muted mb-0 small text-truncate-2 small">Hubtel is rewarding its loyal accounts with great prizes this weekend. You can redeem these…</p>
+                            <a href="#" class="text-decoration-none mt-2 small">Check <i class="fa fa-arrow-right"></i>
+                            </a>
+                          </div>
+                          <p class="text-muted mb-0 mt-2 small mt-2">Dec 25, 2022 at 10:23 AM</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </li>
+                  <li class="h-100">
+                    <div class="d-flex h-100 justify-content-center align-items-center">
+                      <div class="text-center">
+                        <img src="{{url}}/assets/images/notif-empty.png" class="mb-3" width="80"/>
+                        <p class="small mb-0 text-muted">You currently have no notifications.</p>
+                      </div>
+
+                    </div>
+                  </li>
+                </ul>
+                <div class="p-2 text-center bg-faded-green">
+                  <a href="#" class="text-decoration-none">Mark all as read</a>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="hubtel" role="tabpanel" aria-labelledby="hubtel-tab">
+                <ul class="list-unstyled mb-0" id="scroll">
+                  <li class="border-bottom">
+                    <div class="px-4 py-3">
+                      <div class="d-flex">
+                        <i class="fa fa-circle mt-1 text-primary" style="font-size:0.5em"></i>
+                        <div class="ms-2">
+                          <div>
+                            <p class="mb-0 text-truncate-1 small font-weight-bold">SMS is changing.</p>
+                            <p class="text-muted mb-0 small text-truncate-2 small">We’re releasing a new SMS update to improve your experience here. If you experience any issues, report them here</p>
+                            <a href="#" class="text-decoration-none mt-2 small">Read more <i class="fa fa-arrow-right"></i>
+                            </a>
+                          </div>
+                          <p class="text-muted mb-0 mt-2 small">Dec 25, 2022 at 10:23 AM</p>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="border-bottom">
+                    <div class="px-4 py-3">
+                      <div class="d-flex">
+                        <i class="fa fa-circle mt-1 text-primary" style="font-size:0.5em"></i>
+                        <div class="ms-2">
+                          <div class="d-flex">
+                            <div>
+                              <p class="mb-0 text-truncate-1 small font-weight-bold">New Updates in Payment</p>
+                              <p class="text-muted mb-0 small text-truncate-2 small">Hubtel is rewarding its loyal accounts with great prizes this weekend. You can redeem these…</p>
+                              <a href="#" class="text-decoration-none mt-2 small">Read more <i class="fa fa-arrow-right"></i>
+                              </a>
+                            </div>
+                            <div>
+                              <img class="h-100 rounded-3 object-fit-cover" width="78" src="{{ url }}/assets/images/pos-app.webp" alt="img">
+                            </div>
+                          </div>
+                          <p class="text-muted mb-0 mt-2 small">Dec 25, 2022 at 10:23 AM</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </li>
+                  <li class="border-bottom">
+                    <div class="px-4 py-3">
+                      <div class="d-flex">
+                        <div class="ms-2">
+                          <div>
+                            <p class="mb-0 text-truncate-1 small">Messaging Discounts</p>
+                            <p class="text-muted mb-0 small text-truncate-2 small">Hubtel is rewarding its loyal accounts with great prizes this weekend. You can redeem these…</p>
+                            <a href="#" class="text-decoration-none mt-2 small">Read more <i class="fa fa-arrow-right"></i>
+                            </a>
+                          </div>
+                          <p class="text-muted mb-0 mt-2 small">Dec 25, 2022 at 10:23 AM</p>
+                        </div>
+                      </div>
+
+                    </div>
+                  </li>
+                  <li class="h-100">
+                    <div class="d-flex h-100 justify-content-center align-items-center">
+                      <div class="text-center">
+                        <img src="{{url}}/assets/images/notif-empty.png" class="mb-3" width="80"/>
+                        <p class="small mb-0 text-muted">You currently have no notifications.</p>
+                      </div>
+
+                    </div>
+                  </li>
+                </ul>
+                <div class="p-2 text-center bg-faded-green">
+                  <a href="#" class="text-decoration-none">Mark all as read</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="dropdown">
+        <button class="login-btn btn d-flex align-items-center dropdown-toggle p-0 p-lg-3 pe-3" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown"
+        aria-expanded="false">
+          <img class="" width="25" src="{{ url }}/assets/images/svg/user.svg" alt="avatar">
+          <span class="d-none ms-2 d-md-block text-capitalize">James Thompson</span>
+
+        </button>
+        <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton" style="width: 300px;">
+          <div class="dropdown-header bg-faded-blue p-4" style="border-bottom: 3px solid #0E479D;">
+            <h5 class="text-truncate d-flex flex-column">
+              <span style="color: #0E479D;">James Thompson</span>
+            </h5>
+            <p class="text-muted mb-0">Super Administrator</p>
+          </div>
+          <div>
+            <a class="dropdown-item px-4 py-2" href="{{ url }}/html/login/select-business.html">Switch business</a>
+            <a class="dropdown-item px-4 py-2" href="{{ url }}/html/login/index.html">Logout</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </nav>
+  <!-- ./ Navbar -->

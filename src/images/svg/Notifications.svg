@@ -1,0 +1,4 @@
+<svg id="Notifications" xmlns="http://www.w3.org/2000/svg" width="31.409" height="31.61" viewBox="0 0 31.409 31.61">
+  <ellipse id="Ellipse_2" data-name="Ellipse 2" cx="15.705" cy="15.805" rx="15.705" ry="15.805" transform="translate(0)"/>
+  <path id="Icon_awesome-bell" data-name="Icon awesome-bell" d="M7.7,17.61a2.2,2.2,0,0,0,2.2-2.2H5.5A2.2,2.2,0,0,0,7.7,17.61Zm7.408-5.149c-.665-.714-1.908-1.788-1.908-5.307A5.432,5.432,0,0,0,8.8,1.817V1.1a1.1,1.1,0,1,0-2.2,0v.717A5.432,5.432,0,0,0,2.2,7.154C2.2,10.673.961,11.747.3,12.461a1.075,1.075,0,0,0-.3.747,1.1,1.1,0,0,0,1.1,1.1H14.3a1.1,1.1,0,0,0,1.1-1.1,1.074,1.074,0,0,0-.3-.747Z" transform="translate(8 7)" fill="#fff"/>
+</svg>

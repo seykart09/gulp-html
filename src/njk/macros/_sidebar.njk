@@ -1,0 +1,304 @@
+{% macro active(activePage = '', mainActive = '', baseUrl = '../..') %}
+
+  <li class="nav-item {%if activePage == 'dashboard' %} active {% endif %}">
+    <a class="nav-link" href="{{ baseUrl }}/html/dashboard.html">
+      <span class="nav-link-icon">
+        <svg id="Home_Icon" data-name="Home Icon" xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25">
+          <g id="Group_38532" data-name="Group 38532" transform="translate(1.908 1.501)">
+            <g id="Group_38530" data-name="Group 38530" transform="translate(1)">
+              <path id="Path_32275" data-name="Path 32275" d="M-19720.779-23421.566v11.045h17.848v-11.045" transform="translate(19720.779 23430.961)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <path id="Path_32274" data-name="Path 32274" d="M-19733.7-23460.076l-8.84-9.4-9,9.4" transform="translate(19751.541 23469.475)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+              <g id="Rectangle_21977" data-name="Rectangle 21977" transform="translate(4.338 10.956)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1">
+                <rect width="8.786" height="10.042" stroke="none"/>
+                <rect x="1" y="1" width="6.786" height="8.042" fill="none"/>
+              </g>
+            </g>
+          </g>
+        </svg>
+      </span>
+      <p class="nav-link-title">Dashboard</p>
+    </a>
+  </li>
+
+  <li class="nav-item {%if activePage == 'invoicing' %} active {% endif %}">
+    <a class="nav-link" href="{{ baseUrl }}/html/invoicing/index.html">
+      <span class="nav-link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 18 20" fill="none">
+          <path d="M6 8.5L8 10.5L12.5 6M17 19V5.8C17 4.11984 17 3.27976 16.673 2.63803C16.3854 2.07354 15.9265 1.6146 15.362 1.32698C14.7202 1 13.8802 1 12.2 1H5.8C4.11984 1 3.27976 1 2.63803 1.32698C2.07354 1.6146 1.6146 2.07354 1.32698 2.63803C1 3.27976 1 4.11984 1 5.8V19L3.75 17L6.25 19L9 17L11.75 19L14.25 17L17 19Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <p class="nav-link-title">Invoicing</p>
+    </a>
+  </li>
+
+  <li class="nav-item {%if activePage == 'payments' %} active {% endif %}">
+    <a class="nav-link" href="{{ baseUrl }}/html/payments/transactions.html">
+      <span class="nav-link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="17.5" height="16" viewBox="0 0 17.5 16">
+          <g id="Group_38734" data-name="Group 38734" transform="translate(-121.25 -257)">
+            <rect id="Rectangle_22189" data-name="Rectangle 22189" width="16" height="16" transform="translate(122 257)" fill="#fff" opacity="0"/>
+            <g id="Group_38302" data-name="Group 38302" transform="translate(122 259)">
+              <rect id="Rectangle_22190" data-name="Rectangle 22190" width="16" height="13" rx="2" transform="translate(0)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+              <line id="Line_3" data-name="Line 3" x2="16" transform="translate(0 4.333)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+            </g>
+          </g>
+        </svg>
+
+      </span>
+      <p class="nav-link-title">Payments <i class="fa fa-angle-down ms-2 text-white"></i>
+      </p>
+    </a>
+    <div
+    class="collapse mb-3 {%if activePage == 'transactions' or activePage == 'simple_invoices' or activePage == 'full_invoices' or  activePage == 'automated_debits' or  activePage == 'scheduled_payments' %} show {% endif %}"
+    id="submenu1" aria-expanded="false">
+      <ul class="flex-column nav">
+        <li class="nav-item {%if activePage == 'transactions' %} active {% endif %}">
+          <a class="nav-link py-3" href="transactions.html">
+
+            <p class="nav-link-title">Transactions</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'simple_invoices' %} active {% endif %}">
+          <a class="nav-link py-3" href="simple-invoice.html">
+            <p class="nav-link-title">Simple Invoices</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'full_invoices' %} active {% endif %}">
+          <a class="nav-link py-3" href="full-invoices.html">
+            <p class="nav-link-title">Full Invoices</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'automated_debits' %} active {% endif %}">
+          <a class="nav-link py-3" href="automated-debits.html">
+            <p class="nav-link-title">Invoices with Automated Debit</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'scheduled_payments' %} active {% endif %}">
+          <a class="nav-link py-3" href="scheduled-payments.html">
+            <p class="nav-link-title">Scheduled Payments</p>
+          </a>
+        </li>
+        <li class="d-none nav-item {%if activePage == 'bulk_payments' %} active {% endif %}">
+          <a class="nav-link py-3" href="bulk-payments.html">
+            <p class="nav-link-title">Bulk Payments</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+  <li class="nav-item {%if activePage == 'customers' %} active {% endif %}">
+    <a class="nav-link" href="{{ baseUrl }}/html/customers/customers.html">
+      <span class="nav-link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
+          <path id="ic_people_outline_24px" d="M15.091,13A10.066,10.066,0,0,0,11,14a9.906,9.906,0,0,0-4.091-1C4.936,13,1,14.08,1,16.25V19H21V16.25C21,14.08,17.064,13,15.091,13Zm-3.636,4.5H2.364V16.25c0-.54,2.327-1.75,4.545-1.75s4.545,1.21,4.545,1.75Zm8.182,0H12.818V16.25a1.914,1.914,0,0,0-.473-1.22,8.06,8.06,0,0,1,2.745-.53c2.218,0,4.545,1.21,4.545,1.75ZM6.909,12a3.356,3.356,0,0,0,3.182-3.5A3.356,3.356,0,0,0,6.909,5,3.356,3.356,0,0,0,3.727,8.5,3.356,3.356,0,0,0,6.909,12Zm0-5.5a1.921,1.921,0,0,1,1.818,2,1.921,1.921,0,0,1-1.818,2,1.921,1.921,0,0,1-1.818-2A1.921,1.921,0,0,1,6.909,6.5ZM15.091,12a3.356,3.356,0,0,0,3.182-3.5A3.356,3.356,0,0,0,15.091,5a3.356,3.356,0,0,0-3.182,3.5A3.356,3.356,0,0,0,15.091,12Zm0-5.5a1.921,1.921,0,0,1,1.818,2,1.921,1.921,0,0,1-1.818,2,1.921,1.921,0,0,1-1.818-2A1.921,1.921,0,0,1,15.091,6.5Z" transform="translate(-1 -5)" fill="#fff"/>
+        </svg>
+
+      </span>
+      <p class="nav-link-title">Customers</p>
+    </a>
+  </li>
+
+  <li class="nav-item {%if activePage == 'sms' %} active {% endif %}">
+    <a class="nav-link" href="{{ baseUrl }}/html/sms/sms.html">
+      <span class="nav-link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+          <path id="comment-alt-message" d="M14,6H6A.8.8,0,0,0,6,7.6h8A.8.8,0,0,0,14,6Zm0,3.2H6a.8.8,0,0,0,0,1.6h8a.8.8,0,0,0,0-1.6ZM15.6,2H4.4A2.4,2.4,0,0,0,2,4.4v8a2.4,2.4,0,0,0,2.4,2.4h9.272l2.96,2.968A.8.8,0,0,0,17.2,18a.672.672,0,0,0,.3-.064A.8.8,0,0,0,18,17.2V4.4A2.4,2.4,0,0,0,15.6,2Zm.8,13.272-1.832-1.84A.8.8,0,0,0,14,13.2H4.4a.8.8,0,0,1-.8-.8v-8a.8.8,0,0,1,.8-.8H15.6a.8.8,0,0,1,.8.8Z" transform="translate(-2 -2)" fill="#fff"/>
+        </svg>
+
+      </span>
+      <p class="nav-link-title">SMS</p>
+    </a>
+  </li>
+
+  <li class="d-none nav-item {%if activePage == '' %} active {% endif %}">
+    <a class="nav-link" href="{{ baseUrl }}/html/money/accounts.html">
+      <span class="nav-link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.727" viewBox="0 0 20 12.727">
+          <path id="money-bill" d="M5.545,10.455a.909.909,0,1,0,.909.909A.909.909,0,0,0,5.545,10.455Zm10.909,0a.909.909,0,1,0,.909.909A.909.909,0,0,0,16.455,10.455ZM18.273,5H3.727A2.727,2.727,0,0,0,1,7.727V15a2.727,2.727,0,0,0,2.727,2.727H18.273A2.727,2.727,0,0,0,21,15V7.727A2.727,2.727,0,0,0,18.273,5Zm.909,10a.909.909,0,0,1-.909.909H3.727A.909.909,0,0,1,2.818,15V7.727a.909.909,0,0,1,.909-.909H18.273a.909.909,0,0,1,.909.909ZM11,8.636a2.727,2.727,0,1,0,2.727,2.727A2.727,2.727,0,0,0,11,8.636Zm0,3.636a.909.909,0,1,1,.909-.909A.909.909,0,0,1,11,12.273Z" transform="translate(-1 -5)" fill="#fff"/>
+        </svg>
+
+      </span>
+      <p class="nav-link-title">Money <i class="fa fa-angle-down ms-2 text-white"></i>
+      </p>
+    </a>
+    <div
+    class="collapse mb-3 {%if activePage == 'accounts' or activePage == 'settlements_deposits' or activePage == 'transfer' or  activePage == 'pay' or  activePage == 'service_debits' or  activePage == 'approvals' or  activePage == 'payment_history' or activePage == 'commissions' %} show {% endif %}"
+    id="submenu1" aria-expanded="false">
+      <ul class="flex-column nav">
+        <li class="nav-item {%if activePage == 'accounts' %} active {% endif %}">
+          <a class="nav-link py-3" href="accounts.html">
+
+            <p class="nav-link-title">Accounts</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'settlements_deposits' %} active {% endif %}">
+          <a class="nav-link py-3" href="settlements-deposits.html">
+            <p class="nav-link-title">Settlements Deposits</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'transfer' %} active {% endif %}">
+          <a class="nav-link py-3" href="transfers.html">
+            <p class="nav-link-title">Transfer</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'pay' %} active {% endif %}">
+          <a class="nav-link py-3" href="pay.html">
+            <p class="nav-link-title">Pay</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'service_debits' %} active {% endif %}">
+          <a class="nav-link py-3" href="service-debits.html">
+            <p class="nav-link-title">Service Debits</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'approvals' %} active {% endif %}">
+          <a class="nav-link py-3" href="approvals.html">
+            <p class="nav-link-title">Approvals</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'payment_history' %} active {% endif %}">
+          <a class="nav-link py-3" href="payment-history.html">
+            <p class="nav-link-title">History of Payments</p>
+          </a>
+        </li>
+        <li class="nav-item {%if activePage == 'commissions' %} active {% endif %}">
+          <a class="nav-link py-3" href="commission-services.html">
+            <p class="nav-link-title">Commissions</p>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </li>
+
+  <li class="custom-nav-item {%if activePage == '' %} active {% endif %}">
+    <a class="nav-link" href="{{ baseUrl }}/html/money/accounts.html">
+      <span class="nav-link-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="12.727" viewBox="0 0 20 12.727">
+          <path id="money-bill" d="M5.545,10.455a.909.909,0,1,0,.909.909A.909.909,0,0,0,5.545,10.455Zm10.909,0a.909.909,0,1,0,.909.909A.909.909,0,0,0,16.455,10.455ZM18.273,5H3.727A2.727,2.727,0,0,0,1,7.727V15a2.727,2.727,0,0,0,2.727,2.727H18.273A2.727,2.727,0,0,0,21,15V7.727A2.727,2.727,0,0,0,18.273,5Zm.909,10a.909.909,0,0,1-.909.909H3.727A.909.909,0,0,1,2.818,15V7.727a.909.909,0,0,1,.909-.909H18.273a.909.909,0,0,1,.909.909ZM11,8.636a2.727,2.727,0,1,0,2.727,2.727A2.727,2.727,0,0,0,11,8.636Zm0,3.636a.909.909,0,1,1,.909-.909A.909.909,0,0,1,11,12.273Z" transform="translate(-1 -5)" fill="#fff"/>
+        </svg>
+      </span>
+      <p class="nav-link-title">Money <i class="fa fa-angle-down ms-2 text-white"></i>
+      </p>
+    </a>
+    <div
+    class="collapse mb-3 {%if mainActive == 'money' %} show {% endif %}"
+    id="submenu1" aria-expanded="false">
+      <ul class="flex-column nav">
+        <li class="nav-item {%if activePage == '' %} active {% endif %}">
+          <a class="nav-link py-3" href="accounts.html">
+
+            <p class="nav-link-title">Accounts <i class="fa fa-angle-down ms-2 text-white"></i>
+            </p>
+          </a>
+          <div
+          class="collapse mb-3 {%if activePage == 'accounts' or activePage == 'settlements_deposits' or activePage == 'service_debits' %} show {% endif %}"
+          id="submenu1" aria-expanded="false">
+            <ul class="flex-column nav">
+              <li class="nav-item {%if activePage == 'accounts' %} active {% endif %}">
+                <a class="nav-link2 mx-2 py-3" href="accounts.html">
+
+                  <p class="nav-link-title">Deposit Accounts</i>
+                </p>
+              </a>
+            </li>
+            <li class="nav-item {%if activePage == 'settlements_deposits' %} active {% endif %}">
+              <a class="nav-link2 mx-2 py-3" href="settlements-deposits.html">
+                <p class="nav-link-title">Settlement Statement</p>
+              </a>
+            </li>
+            <li class="nav-item {%if activePage == 'service_debits' %} active {% endif %}">
+              <a class="nav-link2 mx-2 py-3" href="service-debits.html">
+                <p class="nav-link-title">Cash Outflows</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="nav-item {%if activePage == '' %} active {% endif %}">
+        <a class="nav-link py-3" href="transfers.html">
+          <p class="nav-link-title">Send Money <i class="fa fa-angle-down ms-2 text-white"></i>
+          </p>
+        </a>
+        <div
+          class="collapse mb-3 {%if activePage == 'transfer' or activePage == 'pay'  or activePage == 'bulk_payments'  or activePage == 'payment_history'  %} show {% endif %}"
+          id="submenu1" aria-expanded="false">
+          <ul class="flex-column nav">
+            <li class="nav-item {%if activePage == 'transfer' %} active {% endif %}">
+              <a class="nav-link2 mx-2 py-3" href="transfers.html">
+
+                <p class="nav-link-title">Transfer from Deposits</i>
+              </p>
+            </a>
+          </li>
+          <li class="nav-item {%if activePage == 'pay' %} active {% endif %}">
+            <a class="nav-link2 mx-2 py-3" href="pay.html">
+              <p class="nav-link-title">Pay Employees/Suppliers</p>
+            </a>
+          </li>
+          <li class="nav-item {%if activePage == 'bulk_payments' %} active {% endif %}">
+            <a class="nav-link2 mx-2 py-3" href="bulk-payments.html">
+              <p class="nav-link-title">Send From Excel</p>
+            </a>
+          </li>
+          <li class="nav-item {%if activePage == 'payment_history' %} active {% endif %}">
+            <a class="nav-link2 mx-2 py-3" href="payment-history.html">
+              <p class="nav-link-title">History</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item {%if activePage == 'approvals' %} active {% endif %}">
+      <a class="nav-link py-3" href="approvals.html">
+        <p class="nav-link-title">Approvals</p>
+      </a>
+    </li>
+  </ul>
+</div>
+</li>
+
+{# <li class="nav-item {%if activePage == '' %} active {% endif %}">
+<a class="nav-link" href="{{ baseUrl }}/html/manage-business/overview.html">
+  <span class="nav-link-icon">
+    <svg xmlns="http://www.w3.org/2000/svg" width="18.263" height="14" viewBox="0 0 18.263 14">
+      <path id="briefcase-svgrepo-com" d="M4,12V9A1,1,0,0,1,5,8H9M4,12v5a1,1,0,0,0,1,1H19a1,1,0,0,0,1-1V12M4,12l7,1h2l7-1m0,0V9a1,1,0,0,0-1-1H15M9,8V7a1,1,0,0,1,1-1h4a1,1,0,0,1,1,1V8M9,8h6m-4,6.5h2" transform="translate(-2.869 -5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </svg>
+
+  </span>
+  <p class="nav-link-title">Manage Business <i class="fa fa-angle-down ms-2 text-white"></i>
+  </p>
+</a>
+<div
+    class="collapse mb-3 {%if activePage == 'overview' or activePage == 'ussd' or activePage == 'services' or activePage == 'permissions' or  activePage == 'programmable_keys' or  activePage == 'settlements' or  activePage == 'branches' or activePage == 'other_settings' %} show {% endif %}"
+    id="submenu1" aria-expanded="false">
+  <ul class="flex-column nav">
+    <li class="nav-item {%if activePage == 'overview' %} active {% endif %}">
+      <a class="nav-link py-3" href="overview.html">
+        <p class="nav-link-title">Overview</p>
+      </a>
+    </li>
+    <li class="nav-item {%if activePage == 'branches' %} active {% endif %}">
+      <a class="nav-link py-3" href="branches.html">
+        <p class="nav-link-title">Branches</p>
+      </a>
+    </li>
+    <li class="nav-item {%if activePage == 'permissions' %} active {% endif %}">
+      <a class="nav-link py-3" href="user-permissions.html">
+        <p class="nav-link-title">Employees</p>
+      </a>
+    </li>
+    <li class="nav-item {%if activePage == 'settlements' %} active {% endif %}">
+      <a class="nav-link py-3" href="transfer-settlements.html">
+        <p class="nav-link-title">Transfer & Settlement</p>
+      </a>
+    </li>
+    <li class="nav-item {%if activePage == 'other_settings' %} active {% endif %}">
+      <a class="nav-link py-3" href="other-settings.html">
+        <p class="nav-link-title">Other Settings</p>
+      </a>
+    </li>
+  </ul>
+</div>
+</li> #}
+
+{% endmacro %}

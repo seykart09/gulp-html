@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
+  <g id="Group_39829" data-name="Group 39829" transform="translate(-779 -334)">
+    <circle id="Ellipse_2240" data-name="Ellipse 2240" cx="25" cy="25" r="25" transform="translate(779 334)" fill="#f7edbe"/>
+    <g id="speedometer-outline" transform="translate(794 349.999)">
+      <path id="Path_32871" data-name="Path 32871" d="M228.125,216.7l-1.925,3.059a1.256,1.256,0,0,1-.284.284,1.22,1.22,0,1,1-1.418-1.986l3.059-1.925a.414.414,0,0,1,.474,0A.408.408,0,0,1,228.125,216.7Z" transform="translate(-214.639 -209.482)" fill="#af9826"/>
+      <path id="Path_32872" data-name="Path 32872" d="M42,64a10,10,0,0,0-7.487,16.625c.049.054.094.107.143.156a1.125,1.125,0,0,0,1.656,0,7.729,7.729,0,0,1,11.375,0,1.125,1.125,0,0,0,1.656,0l.143-.156A10,10,0,0,0,42,64Z" transform="translate(-32 -64)" fill="none" stroke="#af9826" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.4"/>
+      <line id="Line_2217" data-name="Line 2217" y2="1" transform="translate(10 2.936)" fill="none" stroke="#af9826" stroke-linecap="round" stroke-width="1.4"/>
+      <line id="Line_2218" data-name="Line 2218" x1="1" transform="translate(17.001 10.002)" fill="none" stroke="#af9826" stroke-linecap="round" stroke-width="1.4"/>
+      <line id="Line_2219" data-name="Line 2219" x1="1" transform="translate(1.999 10.002)" fill="none" stroke="#af9826" stroke-linecap="round" stroke-width="1.4"/>
+      <line id="Line_2220" data-name="Line 2220" x1="0.707" y1="0.707" transform="translate(5.028 5.042)" fill="none" stroke="#af9826" stroke-linecap="round" stroke-width="1.4"/>
+      <line id="Line_2221" data-name="Line 2221" y1="0.707" x2="0.707" transform="translate(14.265 5.042)" fill="none" stroke="#af9826" stroke-linecap="round" stroke-width="1.4"/>
+    </g>
+  </g>
+</svg>

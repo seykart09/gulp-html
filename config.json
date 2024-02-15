@@ -1,0 +1,17 @@
+{
+  "app_assets": "assets",
+  "app_assets_path": "assets",
+  "destination": {
+    "js": "assets/js",
+    "html": "/html",
+    "css": "assets/css",
+    "images": "assets/images"
+  },
+  "source": {
+    "js": "src/js",
+    "sass": "src/scss",
+    "template": "src/njk",
+    "images": "src/images"
+  },
+  "productionUrl":"https://designs-test.hubtel.com/v4"
+}

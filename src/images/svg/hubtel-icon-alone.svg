@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="350" height="350" viewBox="0 0 350 350">
+  <g id="Group_40822" data-name="Group 40822" transform="translate(-417 -1711)">
+    <rect id="Rectangle_22008" data-name="Rectangle 22008" width="350" height="350" transform="translate(417 1711)" fill="#f8f9fb"/>
+    <g id="Hubtel_Icon" data-name="Hubtel Icon" transform="translate(524.79 1814.212)">
+      <path id="Path_32326" data-name="Path 32326" d="M219.9,264.933c0,24.389,10.426,28.671,24.389,18.245l62.741-48.033c8.006-5.958,11.357-12.1,11.357-18.245h-98.3v48.033Z" transform="translate(-219.9 -144.926)" fill="#009e96"/>
+      <path id="Path_32327" data-name="Path 32327" d="M337.687,264.933c0,24.389-10.426,28.671-24.389,18.245l-62.741-48.033c-8.006-5.958-11.357-12.1-11.357-18.245h98.3Z" transform="translate(-203.267 -144.926)" fill="#ef4923"/>
+      <path id="Path_32328" data-name="Path 32328" d="M337.6,201.809c0-24.389-10.426-28.671-24.389-18.245l-62.555,48.22c-8.006,5.958-11.357,12.1-11.357,18.245h98.3Z" transform="translate(-203.181 -178.241)" fill="#f7961c"/>
+      <path id="Path_32329" data-name="Path 32329" d="M219.9,201.809c0-24.389,10.426-28.671,24.389-18.245L307.03,231.6c8.006,5.958,11.357,12.1,11.357,18.245h-98.3V201.809Z" transform="translate(-219.9 -178.241)" fill="#082e4d"/>
+    </g>
+  </g>
+</svg>
