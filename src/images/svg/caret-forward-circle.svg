@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
-  <g id="caret-forward-circle-outline" transform="translate(-63 -63)">
-    <path id="Path_32866" data-name="Path 32866" d="M214.311,181.355l7.85-6.5a1.4,1.4,0,0,0,0-2.157l-7.85-6.5A1.41,1.41,0,0,0,212,167.274v13a1.41,1.41,0,0,0,2.311,1.078Z" transform="translate(-137.118 -94.776)"/>
-    <path id="Path_32867" data-name="Path 32867" d="M94,79A15,15,0,1,0,79,94,15,15,0,0,0,94,79Z" fill="none" stroke="#000" stroke-width="2"/>
-  </g>
-</svg>

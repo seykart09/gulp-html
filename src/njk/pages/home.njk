@@ -1,0 +1,844 @@
+{% from "components/_widemodal.njk" import widemodal %}
+{% set title='Home' %}
+{% set topNav = 'home' %}
+{% extends "base.njk" %} 
+{% block content %}
+  <div class="">
+    <div id="carouselExampleDark" class="carousel banner-carousel carousel-dark slide " data-bs-interval="false">
+    
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+
+
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{{url}}/assets/images/banner.jpg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <div class="caption-wrapper">
+              <h6 class="bg-dark">February 7,2017</h6>
+              <h3>Splash's Unforgettable Come</h3>
+              <h6 class="mb-5">The Splash stadium has seen plenty of magic before but never anything like this. Splash`s dramatic comeback vs. Kensington had everything.</h6>
+              <button type="button" class="btn btn-primary">READ MORE</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+          <img src="{{url}}/assets/images/banner-coba.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <div class="caption-wrapper">
+              <h6 class="bg-dark">February 7,2017</h6>
+              <h3>Unforgettable Come</h3>
+              <h6 class="mb-5">The Splash stadium has seen plenty of magic before but never anything like this. Splash`s dramatic comeback vs. Kensington had everything.</h6>
+              <button type="button" class="btn btn-primary">READ MORE</button>
+            </div>
+            </div>
+        </div>
+
+        <div class="carousel-item" >
+          <img src="{{url}}/assets/images/parallax-bg.jpeg" class="d-block w-100" alt="...">
+          <div class="carousel-caption">
+            <div class="caption-wrapper">
+              <h6 class="bg-dark">February 7,2017</h6>
+              <h3>Top Scorer</h3>
+              <h6 class="mb-5">The Splash stadium has seen plenty of magic before but never anything like this. Splash`s dramatic comeback vs. Kensington had everything.</h6>
+              <button type="button" class="btn btn-primary">READ MORE</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+
+    <!-- FIRST SECTION-->
+    <section class="sections-formargins d-none d-md-block">
+      <div class="container">
+
+        <div class="text-center mb-5">
+          <h1 class="fw-bold">LASTEST RESULTS</h1>
+          <div class="d-flex justify-content-center">
+            <span class="first-section-span d-flex align-items-center"></span>
+          </div>
+          <h5>PRIMARY LEAGUE</h5>
+        </div>
+
+        <div class="">
+          <div class="row justify-content-center gx-5">
+
+            <div class="col-4">
+              <div class="d-flex align-items-center justify-content-end"> 
+                <div class="me-5 pe-4">
+                  <h5>SPLASH FC</h5>
+                  <span class="first-section-span-1"></span>
+                  <h6>WIN</h6>   
+                </div>
+                <div class="team-stat">
+                  <div class="logo pointer">
+                    <img src="{{url}}/assets/images/braves-logo.png" class="" width="90" height="90" alt="">
+                  </div>
+                  <div class="score text-end">
+                    <p class="mb-0">350</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-4">
+              <div class="d-flex align-items-center justify-content-start"> 
+                <div class="team-stat right">
+                  <div class="score text-start">
+                    <p class="mb-0">200</p>
+                  </div>
+                  <div class="logo pointer">
+                    <img src="{{url}}/assets/images/coba-logo.png" class="" width="90" height="90" alt="">
+                  </div>
+                </div>
+                <div class="ms-5 ps-4">
+                  <h5>BENTLEIGH BLUEBIRDS</h5>
+                <span class="first-section-span-1"></span>
+                <h6>LOSS</h6>   
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+            <div class="mt-4 text-center">
+              <h6 class="mb-1">Decemeber 9,2021 | 9:50am</h6>
+              <p class="text-primary fs-7">Green Park</p>
+            </div>
+
+            <div class="text-center">
+              <button type="button" class="btn btn-primary px-4">READ MORE</button>
+
+            </div>
+
+        </div>
+      </div>
+    </section>
+    <!--FIRST SECTION-->
+
+    <!--SECOND SECTION -->
+    <section class="second-section">
+      <div class="container"> 
+        <div class="sections-formargins align-items-center justify-content-center">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+
+                <!--FIRST COLUMN-->
+                <div class="col">
+
+                  <div class="h-100">
+                    <div class="text-uppercase text-center text-white bg-primary p-4 mb-2">
+                      <h5 class="mb-0">Next Match</h5>
+                    </div>
+                    <div class="rounded-0 border-0">
+                      <div class="">
+  
+                        <div class="d-flex w-100 text-nowrap gap-3">
+                            <div class="bg-secondary flex-fill p-3 border-bottom border-5 border-primary text-center">
+                              <h3 class="text-white">334</h3>
+                              <small class="text-white mb-0 small">days</small>
+                            </div>
+                            <div class="bg-secondary flex-fill p-3 border-bottom border-5 border-primary text-center">
+                              <h3 class="text-white">21</h3>
+                              <small class="text-white mb-0 small">hrs</small>
+                            </div>
+                            <div class=" bg-secondary flex-fill p-3 border-bottom border-5 border-primary text-center">
+                              <h3 class="text-white">56</h3>
+                              <small class="text-white mb-0 small">mins</small>
+                            </div>
+                            <div class="bg-secondary flex-fill p-3 border-bottom border-5 border-primary text-center">
+                              <h3 class="text-white">56</h3>
+                              <small class="text-white mb-0 small">mins</small>
+                            </div>
+                        </div>
+  
+                        <div class="mt-2 text-center text-white">
+                          <div class="p-3 bg-secondary-alt border-bottom border-primary border-5">
+                            <div class="d-flex justify-content-evenly w-100 align-items-center">
+                              <div class="d-flex flex-column align-items-center">
+                                <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/7-98x98.png" alt="" width="60" srcset="">
+                                <h6 class="mb-0 mt-2 text-uppercase">Splash fc</h6>
+                              </div>
+                              <h4>- VS -</h4>
+                              <div class="d-flex flex-column align-items-center">
+                                <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/7-98x98.png" alt="" width="60" srcset="">
+                                <h6 class="mb-0 mt-2 text-uppercase">Splash fc</h6>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="text-center bg-secondary py-3">
+                            <h6 class="">January 19, 2002</h6>
+                            <h6 class="mb-0">Essendon</h6>
+                          </div>
+  
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--FIRST COLUMN-->
+                        
+                <!--SECOND COLUMN-->
+                <div class="col">
+
+                  <div class="h-100">
+                    <div class="text-uppercase text-center text-white bg-primary p-4 mb-2">
+                      <h5 class="mb-0">Upcoming Fixtures</h5>
+                    </div>
+                    <div class="rounded-0 border-0">
+                      <div class="text-white text-center">
+  
+                        
+  
+                        <div class="">
+                          <div class="p-3 bg-secondary-alt border-bottom border-primary border-5">
+                            <div class="d-flex justify-content-center w-100 align-items-center gap-3">
+                              <div class="">
+                                <h6 class="text-uppercase mb-0">Splash fc</h6>
+                              </div>
+                              <h5 class="fw-bold mb-0">- VS -</h5>
+                              <div class="">
+                                <h6 class="text-uppercase mb-0">Splash fc</h6>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="text-center bg-secondary py-3">
+                            <h6 class="">January 19, 2002</h6>
+                            <h6 class="">Essendon</h6>
+                          </div>
+  
+                        </div>
+  
+                        <div class="mt-3">
+                          <div class="p-3 bg-secondary-alt border-bottom border-primary border-5">
+                            <div class="d-flex justify-content-center w-100 align-items-center gap-3">
+                              <div class="">
+                                <h6 class="text-uppercase mb-0">Splash fc</h6>
+                              </div>
+                              <h5 class="fw-bold mb-0">- VS -</h5>
+                              <div class="">
+                                <h6 class="text-uppercase mb-0">Splash fc</h6>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="text-center bg-secondary py-3">
+                            <h6 class="">January 19, 2002</h6>
+                            <h6 class="">Essendon</h6>
+                          </div>
+  
+                        </div>
+  
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!--SECOND COLUMN-->
+
+                <!--FOURTH COLUMN-->
+                <div class="col">
+
+                  <div class="h-100">
+                    <div class="text-uppercase text-center text-white bg-primary p-4 mb-2">
+                      <h5 class="mb-0">Top Players</h5>
+                    </div>
+                    <div class="border-0 rounded-0">
+                      <div class="">
+                        
+  
+                        <div>
+                          <table class="table table-striped table-dark">
+                            <thead>
+                              <tr>
+                                <th scope="col">POS</th>
+                                <th scope="col">TEAM</th>
+                                <th scope="col">P</th>
+                                <th scope="col">W</th>
+                                <th scope="col">L</th>
+                                <th scope="col">PTS</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1.</th>
+                                <td>SPLASH FC</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>9</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2.</th>
+                                <td>JELLIS NIKOLS</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>9</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3.</th>
+                                <td>JELLIS NIKOLS</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>9</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">4.</th>
+                                <td>JELLIS NIKOLS</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>9</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">5.</th>
+                                <td>JELLIS NIKOLS</td>
+                                <td>4</td>
+                                <td>3</td>
+                                <td>1</td>
+                                <td>9</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                          <div class="p-4 text-center bg-secondary">
+                            <a href="#" class="h5 text-decoration-none">View All</a>
+                          </div>
+                        </div>
+  
+  
+  
+  
+                    </div>
+                    </div>
+                  </div>
+                </div>
+                <!--THIRD COLUMN-->
+                              
+            </div>
+        </div>
+      </div>
+    </section>
+    <!--SECOND SECTION  -->
+
+    <!--THIRD SECTION -->
+    <section class="third-section">
+      <div class="container">
+        <div class="sections-formargins">
+          <div class="carousel slide" id="myCarousel"  data-bs-interval="false">
+            <h1 class="fw-bold text-uppercase">top products</h1>
+
+            <div class="carousel-inner">
+
+                <div class="carousel-item third-section-carosuel-item active">
+                  <div class="cardbox-container">
+                  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 flex-nowrap">
+                    <!-- Card 1 -->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/15.jpg"/>
+                        <div class="cardbox-body align-items-start">
+                            <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                            <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div> 
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/9.jpg"/>
+                        <div class="cardbox-body align-items-start">
+
+                              <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                              <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>  
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/15.jpg"/>
+                        <div class="cardbox-body align-items-start">
+
+                              <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                              <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Card 4-->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/9.jpg"/>
+                        <div class="cardbox-body align-items-start">
+
+                              <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                              <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Cars 5-->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/15.jpg"/>
+                        <div class="cardbox-body align-items-start">
+
+                              <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                              <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                </div>
+
+              <div class="carousel-item third-section-carosuel-item  ">
+                <div class="cardbox-container">
+                  <div class="row row-cols-1 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 flex-nowrap">
+                    <!-- Card 1 -->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/3.jpg"/>
+                        <div class="cardbox-body align-items-start">
+                            <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                            <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div> 
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/14.jpg"/>
+                        <div class="cardbox-body align-items-start">
+                            <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                            <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>  
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/3.jpg"/>
+                        <div class="cardbox-body align-items-start">
+
+                              <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                              <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Card 4-->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/14.jpg"/>
+                        <div class="cardbox-body align-items-start">
+
+                              <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                              <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--Cars 5-->
+                    <div class="col">
+                      <div class="cardbox">
+                        <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/3.jpg"/>
+                        <div class="cardbox-body align-items-start">
+                            <h5 class="cardbox-title">BLUE T-SHIRT LINE</h5>
+                            <p class="cardbox-text">Clothing</p>
+                        </div>
+                        <div class="cardbox-bottom">
+                          <h5>$9.00</h5>
+                          <p class="w-50">700</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <!-- Carousel controls -->
+            <div class="carousel-controls">
+
+              <a class="carousel-control-prev" href="#myCarousel" role="button" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              </a>
+              <a class="carousel-control-next" href="#myCarousel" role="button" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--THIRD SECTION -->
+
+    <!--FOURTH SECTION LASTEST NEWS -->
+      <section class="fourth-section">
+      <div class="container"> 
+        <div class="sections-formargins align-items-center justify-content-center">
+          
+          <!--NAV-TAB-->
+            <div class="tab-content">   
+              <div class="d-flex justify-content-between tab-wrapper">
+                <div>
+                  <h1 class="fw-bold text-uppercase"> Lastest News</h1>
+                </div>
+                <div>
+                  <ul class="nav nav-tabs mb-4 justify-content-end" id="myTab" role="tablist">
+
+                    <li class="nav-item me-1" role="presentation">
+                      <button class="nav-link active" id="news-tab" data-bs-toggle="tab" data-bs-target="#news" type="button" role="tab" aria-controls="news" aria-selected="true">News</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link " id="club-news-tab" data-bs-toggle="tab" data-bs-target="#club-news" type="button" role="tab" aria-controls="club-news" aria-selected="false">Club News </button>
+                    </li>
+                </ul>
+                </div>
+              </div>
+
+                <!--TABS CONTENT-->
+                <div class="tab-content" id="myTabContent">
+      
+                    <!--NEWS TAB-->
+                    <div class="tab-pane fade show active " id="news" role="tabpanel" aria-labelledby="news-tab" tabindex="0">
+                          <div>
+                            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+
+                                <!--FIRST COLUMN-->
+                                <div class="col">
+                                  <div class="card border-0 rounded-0">
+                                    <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/02/news-6-270x220.jpg" alt="...">
+                                    <div class="card-body px-0">
+                                      <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                      <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                      <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                        <p class="mb-0">February 8,2017</p>
+                                        <!-- <p class="mb-0">300</p> -->
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--FIRST COLUMN-->
+                        
+                                <!--SECOND COLUMN-->
+                                <div class="col">
+                                  <div class="card border-0 rounded-0">
+                                    <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/news-3-270x220.jpg" alt="...">
+                                    <div class="card-body px-0">
+                                      <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                      <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                      <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                        <p class="mb-0">February 8,2017</p>
+                                        <!-- <p class="mb-0">300</p> -->
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--SECOND COLUMN-->
+
+                                  <!--THIRD COLUMN-->
+                                <div class="col">
+                                  <div class="card border-0 rounded-0">
+                                    <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/02/news-6-270x220.jpg" alt="...">
+                                    <div class="card-body px-0">
+                                      <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                      <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                      <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                        <p class="mb-0">February 8,2017</p>
+                                        <!-- <p class="mb-0">300</p> -->
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--THIRD COLUMN-->
+          
+                                <!--FOURTH COLUMN-->
+                                <div class="col">
+                                  <div class="card border-0 rounded-0">
+                                    <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/news-3-270x220.jpg" alt="...">
+                                    <div class="card-body px-0">
+                                      <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                      <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                      <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                        <p class="mb-0">February 8,2017</p>
+                                        <!-- <p class="mb-0">300</p> -->
+                                    </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!--FOURTH COLUMN-->
+                              
+                            </div>
+                          </div>
+                    </div>
+                    <!--NEWS TAB-->
+
+                    <!-- CLUB-NEWS TAB -->
+                    <div class="tab-pane fade" id="club-news" role="tabpanel" aria-labelledby="club-news-tab" tabindex="0">
+                        <div>
+                          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4">
+
+                            <!--FIRST COLUMN-->
+                            <div class="col">
+                              <div class="card border-0 rounded-0">
+                                <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/02/news-5-1-270x220.jpg" alt="...">
+                                <div class="card-body px-0">
+                                  <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                  <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                  <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                    <p class="mb-0">February 8,2017</p>
+                                    <!-- <p class="mb-0">300</p> -->
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--FIRST COLUMN-->
+                        
+                            <!--SECOND COLUMN-->
+                            <div class="col">
+                              <div class="card border-0 rounded-0">
+                                <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/news-2-270x220.jpg" alt="...">
+                                <div class="card-body px-0">
+                                  <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                  <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                  <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                    <p class="mb-0">February 8,2017</p>
+                                    <!-- <p class="mb-0">300</p> -->
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--SECOND COLUMN-->
+
+                            <!--THIRD COLUMN-->
+                            <div class="col">
+                              <div class="card border-0 rounded-0">
+                                <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/02/news-5-1-270x220.jpg" alt="...">
+                                <div class="card-body px-0">
+                                  <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                  <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                  <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                    <p class="mb-0">February 8,2017</p>
+                                    <!-- <p class="mb-0">300</p> -->
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--THIRD COLUMN-->
+                                
+                            <!--FOURTH COLUMN-->
+                            <div class="col">
+                              <div class="card border-0 rounded-0">
+                                <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/news-2-270x220.jpg" alt="...">
+                                <div class="card-body px-0">
+                                  <h5 class="fw-bold card-title">HE WORLD CHAMPIONSHIP IN GERMANY AND EUROP</h5>
+                                  <p class="card-text">Spilled sensationally that sancti moniously gawked dear misheard</p>
+                                  <div class="d-flex justify-content-between card-bottom py-1 px-2 bg-faded-silver">
+                                    <p class="mb-0">February 8,2017</p>
+                                    <!-- <p class="mb-0">300</p> -->
+                                </div>
+                                </div>
+                              </div>
+                            </div>
+                            <!--FOURTH COLUMN-->
+                              
+                          </div>
+                        </div>
+                    </div>
+                    <!-- CLUB-NEWS TAB -->
+                </div>
+                <!--TABS CONTENT-->
+
+            </div>
+          <!--NAV-TAB-->
+        </div>
+      </div>
+      </section>
+    <!--FOURTH SECTION LASTEST NEWS -->
+
+      <!--FIFTH SECTION PLAYERS -->
+      <section class="third-section players-section position-relative">
+        <div class="container">
+          <div class="sections-formargins">
+            <h1 class="text-white text-uppercase mb-4">Coaches</h1>
+            
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+              <!-- Card 1 -->
+              <div class="col">
+                <div class="cardbox">
+                  <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/62-1-540x440.jpg"/>
+                  <div class="cardbox-body align-items-start">
+                    <h5 class="cardbox-title text-uppercase">Ato</h5>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between cardbox-bottom">
+                    <h5 class="text-uppercase">Head Coach</h5>
+                    <p class="w-25">700</p>
+                  </div>
+                </div> 
+              </div>
+              <!-- Card 2 -->
+              <div class="col">
+                <div class="cardbox">
+                  <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/33-540x440.jpg"/>
+                  <div class="cardbox-body align-items-start">
+                    <h5 class="cardbox-title text-uppercase">Eric</h5>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between cardbox-bottom">
+                    <h5 class="text-uppercase">Skills Coach</h5>
+                    <p class="w-25">700</p>
+                  </div>
+                </div> 
+              </div>
+              <!-- Card 3 -->
+              <div class="col">
+                <div class="cardbox">
+                  <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/62-1-540x440.jpg"/>
+                  <div class="cardbox-body align-items-start">
+                    <h5 class="cardbox-title text-uppercase">Koo</h5>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between cardbox-bottom">
+                    <h5 class="text-uppercase">Life Coach</h5>
+                    <p class="w-25">700</p>
+                  </div>
+                </div> 
+              </div>
+              <!--Card 4-->
+              <div class="col">
+                <div class="cardbox">
+                  <img src="https://splash.stylemixthemes.com/soccer/wp-content/uploads/sites/3/2017/01/33-540x440.jpg"/>
+                  <div class="cardbox-body align-items-start">
+                    <h5 class="cardbox-title text-uppercase">Samuel</h5>
+                  </div>
+                  <div class="d-flex align-items-center justify-content-between cardbox-bottom">
+                    <h5 class="text-uppercase">Physical Coordinator</h5>
+                    <p class="w-25">700</p>
+                  </div>
+                </div> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <!--Fifth Section PLAYERS -->
+    
+     <!--SIXTH SECTION AWARDS -->
+     <section class="third-section bg-white position-relative ">
+      <div class="container">
+        <div class="sections-formargins">
+          <div>
+            <h1 class="text-uppercase fw-bold">awards</h1>
+
+             <div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
+                <!-- Card 1 -->
+                <div class="col">
+                  <div class="cardbox d-flex flex-column align-items-center justify-content-center awards-section-cardbox">
+                    <img class="awards-section-image" src="{{url}}/assets/images/trophy.png"/>
+                    <div class="cardbox d-flex flex-column">
+                        <span class="w-25 awards-section-span"></span>
+                        <h5 class="cardbox-title awards-section-cardbox-title text-center">	2012 UEFA CHAMPIONS LEAGUE</h5>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col">
+                  <div class="cardbox d-flex flex-column align-items-center justify-content-center awards-section-cardbox">
+                    <img class="awards-section-image" src="{{url}}/assets/images/trophy.png"/>
+                    <div class="d-flex flex-column">
+                        <span class="w-25 awards-section-span"></span>
+                        <h5 class="cardbox-title awards-section-cardbox-title text-center">	2012 UEFA CHAMPIONS LEAGUE</h5>
+                    </div>
+                  </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col">
+                  <div class="cardbox d-flex flex-column align-items-center justify-content-center awards-section-cardbox">
+                    <img class="awards-section-image" src="{{url}}/assets/images/trophy.png"/>
+                    <div class="d-flex flex-column">
+                        <span class="w-25 awards-section-span"></span>
+                        <h5 class="cardbox-title awards-section-cardbox-title text-center">	2012 UEFA CHAMPIONS LEAGUE</h5>
+                    </div>
+                  </div>
+                </div>
+                <!--Card 4-->
+                <div class="col">
+                  <div class="cardbox d-flex flex-column align-items-center justify-content-center awards-section-cardbox">
+                    <img class="awards-section-image" src="{{url}}/assets/images/trophy.png"/>
+                    <div class="d-flex flex-column">
+                        <span class="w-25 awards-section-span"></span>
+                        <h5 class="cardbox-title awards-section-cardbox-title text-center">	2012 UEFA CHAMPIONS LEAGUE</h5>
+                    </div>
+                  </div>
+                </div>
+                <!--Cars 5-->
+                <div class="col">
+                  <div class="cardbox d-flex flex-column align-items-center justify-content-center awards-section-cardbox">
+                    <img class="awards-section-image" src="{{url}}/assets/images/trophy.png"/>
+                    <div class="d-flex flex-column">
+                        <span class="w-25 awards-section-span"></span>
+                        <h5 class="cardbox-title awards-section-cardbox-title text-center">	2012 UEFA CHAMPIONS LEAGUE</h5>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--SIXTH SECTION AWARDS-->
+
+  </div>
+
+{% endblock %}
+
+{% block scripts %}
+<script></script>
+  
+{% endblock %}

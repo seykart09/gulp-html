@@ -44,3 +44,36 @@
     }
   }
 }
+
+.accordion{
+  .accordion-item{
+    border-radius: 0;
+    border: none;
+    margin-bottom: 5px;
+
+    .accordion-header{
+      button{
+        background-color: #545c64;
+        color: white;
+        text-transform: uppercase;
+        border-radius: 0;
+        outline: 0 !important;
+
+        &::after{
+            display: none;
+          }
+
+          i{
+            transition: 0.5s all ease-in-out;
+          }
+
+        &:not(.collapsed){
+          background-color: $primary;
+          i{
+            transform: rotate(-180deg);
+          }
+        }
+      }
+    }
+  }
+}

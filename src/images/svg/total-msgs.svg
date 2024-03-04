@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50">
-  <g id="Group_39828" data-name="Group 39828" transform="translate(-389 -334)">
-    <circle id="Ellipse_2240" data-name="Ellipse 2240" cx="25" cy="25" r="25" transform="translate(389 334)" fill="#c3e3f7"/>
-    <path id="envelope-upload" d="M20.5,14a1,1,0,0,0-1,1v4a1,1,0,0,1-1,1H4.5a1,1,0,0,1-1-1V9.41L9.38,15.3a3,3,0,0,0,4.24,0l1.64-1.64a1,1,0,0,0-1.42-1.42L12.2,13.88a1,1,0,0,1-1.4,0L4.91,8H11.5a1,1,0,0,0,0-2h-7a3,3,0,0,0-3,3V19a3,3,0,0,0,3,3h14a3,3,0,0,0,3-3V15A1,1,0,0,0,20.5,14Zm1.71-8.71-3-3a1.034,1.034,0,0,0-1.42,0l-3,3a1,1,0,1,0,1.42,1.42l1.29-1.3V11a1,1,0,0,0,2,0V5.41l1.29,1.3a1,1,0,1,0,1.42-1.42Z" transform="translate(401.5 346.995)" fill="#0f86e6"/>
-  </g>
-</svg>
