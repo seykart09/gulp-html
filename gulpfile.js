@@ -7,12 +7,9 @@ var del = require("del");
 const newer = require("gulp-newer");
 const imagemin = require("gulp-imagemin");
 
-
 // var minimist = require('minimist');
 var config = require("./config.json");
-
 // var options = minimist(process.argv.slice(2));
-
 // global.myLayout = options.Layout;
 global.config = config;
 // global.pugSrc = ['*.pug', '!**/template.pug'];
@@ -27,9 +24,10 @@ const copyTask = require("./gulp-tasks/copy")(gulp);
 const cssTasks = require("./gulp-tasks/css")(gulp);
 const pugTasks = require("./gulp-tasks/pug")(gulp);
 const replaceTasks = require("./gulp-tasks/replace")(gulp);
-const scssTasks = require("./gulp-tasks/scss")(gulp);
+const scssTasks = require("./gulp-tasks/scss")(gulp, config);
 const imageTasks = require("./gulp-tasks/images")(gulp);
 const uglifyTasks = require("./gulp-tasks/uglify")(gulp);
+
 
 // Clean assets
 const clean = function () {
@@ -43,15 +41,20 @@ const clean = function () {
 const dist_css = gulp.series(
   scssTasks.pages,
   autoPrefixTasks.css,
-  cssTasks.css_comb,
   cssTasks.css_min
 );
 
 // Dist JS
 const scripts = gulp.series(copyTask.js, uglifyTasks.js);
 
-// Dist HTML
+// Dist Fonts
+const fonts = function () {
+  return gulp
+    .src(config.source.fonts + "/**/*")
+    .pipe(gulp.dest(config.destination.fonts + '/'));
+};
 
+// Dist HTML
 const html = function () {
   var baseUrl = argv.production ? config.productionUrl : "..";
   var starterUrl = argv.production ? config.productionUrl : "../..";
@@ -92,7 +95,7 @@ const images = function () {
         }),
       ])
     )
-    .pipe(gulp.dest(config.destination.images  + '/'));
+    .pipe(gulp.dest(config.destination.images + "/"));
 };
 
 // Dist Images
@@ -105,7 +108,8 @@ const watchFiles = function () {
   gulp.watch("./src/njk/**/*.+(html|njk)", html);
   gulp.watch(config.source.images + "/**/*", images);
   gulp.watch(config.source.js + "/**/*.js", scripts);
-}
+  gulp.watch(config.source.fonts + "/**/*", fonts);
+};
 
 // Beautify HTML
 const beautifyHtml = gulp.series(beautifyTasks.html);
@@ -117,12 +121,7 @@ const replacement = gulp.series(replaceTasks.css, replaceTasks.js);
 const watch = gulp.parallel(watchFiles);
 const build = gulp.series(
   clean,
-  gulp.parallel(
-    dist_css,
-    scripts,
-    html,
-    images
-  )
+  gulp.parallel(dist_css, scripts, html, images, fonts)
 );
 
 exports.default = watch;

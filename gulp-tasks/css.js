@@ -7,6 +7,9 @@ module.exports = (gulp, callback) => {
     return gulp
       .src(['**/*.css', '!**/*.min.css'], { cwd: config.destination.css })
       .pipe(csscomb())
+      .on('error', function (err) {
+        console.error('CSS Comb error:', err.message);
+      })
       .pipe(gulp.dest(config.destination.css));
   };
 
